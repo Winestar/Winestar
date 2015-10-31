@@ -83,3 +83,4 @@ production:
   database: Winestar_production
   username: Winestar
   password: <%= ENV['WINESTAR_DATABASE_PASSWORD'] %>
+
