@@ -5,6 +5,10 @@ class SiteController < ApplicationController
   	render :index
   end
 
+  def trip
+  	render :trip
+  end
+
   # creates new likes
   def new
 

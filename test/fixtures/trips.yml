@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  available_now: MyString
+  arrival_date: MyString
+  departure_date: MyString
+  number_of_people: MyString
+  start_location: MyString
+  end_location: MyString
+  price_range: MyString
+
+two:
+  available_now: MyString
+  arrival_date: MyString
+  departure_date: MyString
+  number_of_people: MyString
+  start_location: MyString
+  end_location: MyString
+  price_range: MyString
