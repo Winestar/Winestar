@@ -12,7 +12,6 @@ class UsersController < ApplicationController
 
       # redirected_to @user, notice: "Signed up successfully."
   		# session[:user_id] = user.user_id
-      UserMailer.welcome_email(@user).deliver
   		redirect_to root_path
   	else
       # format.html { render action: "new"}
