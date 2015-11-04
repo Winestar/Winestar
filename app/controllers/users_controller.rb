@@ -7,11 +7,14 @@ class UsersController < ApplicationController
 
 # creates new users into db
   def create
-  	user = User.new(user_params)
-  	if user.save
+  	@user = User.new(user_params)
+  	if @user.save
+
+      # redirected_to @user, notice: "Signed up successfully."
   		# session[:user_id] = user.user_id
   		redirect_to root_path
   	else
+      # format.html { render action: "new"}
   		redirect_to signup_path
   	end
   end
