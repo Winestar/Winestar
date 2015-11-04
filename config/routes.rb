@@ -2,13 +2,13 @@ Rails.application.routes.draw do
   
 
   #form to create new trip
-  get 'trip/new' => 'trip#new'
+  get 'trips/new' => 'trips#new'
 
   # creates new user in db
-  get 'trip/create'
+  get 'trips/create'
 
   #show current user
-  get 'trip/show'
+  get 'trips/show'
 
 
 # root routes
