@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
   #form to create new trip
-  get 'trips/new' => 'trips#new'
+  get '/trips' => 'trips#new'
 
   # creates new user in db
   get 'trips/create'
@@ -12,11 +12,12 @@ Rails.application.routes.draw do
 
 
 # root routes
-root 'site#index'
+root 'likes#new'
 
 #users routes homie
 get "/signup", to: "users#new"
 resources :users, only: [:create]
+resources :likes, only: [:create]
 resources :trips
 
  
