@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(version: 20151105020348) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone_number"
+    t.string   "phone_number",    limit: 12
     t.string   "email"
     t.string   "password_digest"
     t.string   "contact_text"
     t.string   "contact_email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Confirmation</title>
+</head>
+<body>
+
+<p>
+Hello <%= @user.first_name %>! <br>
+
+Thank you for your trip request! 
+Dreaming of getting out of the city and into the beautiful wine country - we are, too! 
+Feel relaxed knowing the Wine Star team is on it and we enjoy taking the hassle of planning your get--away trip. <br>
+
+angel-island-state-park-california-san-francisco-city-chardonnay-in-wine-glass-inverted-image-david-rigg.jpg <br>
+
+Status: We are currently working with wine makers and their teams on putting together the perfect day for you! 
+We will be in touch in the next twenty-four hours and please don't hesitate to contact us with any questions! <br>
+
+If you have any changes to your requested dates or any additional information you'd for us to know, 
+please reply to this email with those changes! Your trip details are below. <br>
+
+
+Trip Details sent to WineStar:
+Preferences: 
+Date: 
+Group Size: 
+Additional Information:
+<p>First Name: <%= @user.first_name %></p>
+<p>Last Name: <%= @user.last_name %></p>
+<p>Email: <%= @user.email %></p>
+<p>Phone Number: <%= @user.phone_number %></p>
+<p>Email?: <%= @user.contact_email %></p>
+
+Best,
+
+Wanda, your Magic Wand Specialist
+WineStar, Inc.
+</p>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-class ChangeColumnType1 < ActiveRecord::Migration
+	class ChangeColumnType1 < ActiveRecord::Migration
   def change
   	change_column :trips, :available_now, 'boolean USING CAST(available_now AS boolean)'
   	change_column :trips, :price_range, 'integer USING CAST(price_range AS integer)'
