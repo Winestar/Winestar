@@ -1,25 +1,41 @@
-<h1>Sign Up</h1>
+<style>
+body{
+    background-color: black;
+}
+</style>
+<div class="jumbotron container-fluid">
+	<h3><center>Tell us about yourself</center></h3>
+	<h4><center>Let us know how to contact you.</center></h4>
 
-<%= form_for (@user) do |f| %>
-<%= f.text_field :first_name, placeholder: "First Name" %><br>
-<%= f.text_field :last_name, placeholder: "Last Name" %><br>
-<%= f.text_field :phone_number, placeholder: "Phone Number" %><br>
-<%= f.text_field :email, placeholder: "Email" %><br>
-<%= f.password_field :password, placeholder: "Password" %><br>
+</div>
 
-<!-- radio button -->
-  <div class="field">
-    <%= f.label :contact_me_with %><br />
 
-    <%= f.label :contact_email, "Email" %>
-    <%= f.radio_button :contact_email, :Email if :checked %>
+<div class="col-sm-4 col-sm-offset-4">
 
-    <%= f.label :contact_text, "Text" %>
-    <%= f.radio_button :contact_text, :Text if :checked %>
-  </div>
-  
+	<%= form_for (@user) do |f| %>
+		<div class ="col-sm-6">
+			<%= f.text_field :first_name, placeholder: "First Name", class:"form-control" %>
+		</div>
+		<div class ="col-sm-6">
+			<%= f.text_field :last_name, placeholder: "Last Name", class:"form-control" %><br>
+		</div>
+		<%= f.text_field :phone_number, placeholder: "Phone Number", class:"form-control" %><br>
+		<%= f.text_field :email, placeholder: "Email", class:"form-control" %><br>
+		<%= f.password_field :password, placeholder: "Password", class:"form-control" %><br>
+		<%= f.password_field :password, placeholder: "Re-Enter Password", class:"form-control" %><br>
 
-<%= f.submit "Sign Up" %>
+		
+		<!-- radio button -->
+		<div class="field">
+			<p>How would you like to be contacted? (Choose one or both)</p>
+		  <%= f.label :contact_email, "Email" %>
+		  <%= f.radio_button :contact_email, :Email if :checked %>
+		  <%= f.label :contact_text, "Text" %>
+		  <%= f.radio_button :contact_text, :Text if :checked %>
+		</div>
 
-<% end %> 
+	<%= f.submit "Sign Up", class: "btn btn-primary"%>
+
+	<% end %> 
+</div>
 

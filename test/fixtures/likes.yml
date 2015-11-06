@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tours: MyString
+  red_wines: MyString
+  white_wines: MyString
+
+two:
+  tours: MyString
+  red_wines: MyString
+  white_wines: MyString

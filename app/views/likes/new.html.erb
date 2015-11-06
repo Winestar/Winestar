@@ -1,0 +1,28 @@
+
+<%= form_for @like do |f| %>
+
+  <div class="field">
+    <%= f.label "Choose Your Preferences :" %><br />
+    <label>
+    <%= f.label :tours, "Tours" %>
+    <%= f.radio_button :tours, :Tours if :checked %>
+    <img src="http://www.beauwinetours.com/wp-content/uploads/2013/06/napa-valley-wine-tours-BODY1.jpg" width="150px">
+    </label>
+
+    <label>
+    <%= f.label :red_wines, "Red Wines" %>
+    <%= f.radio_button :red_wines, :Red_Wines if :checked %>
+    <img src="http://www.temeculawines.org/blog/wp-content/uploads/2012/12/red_wine1.jpg" width="150px">
+    </label>
+
+    <label>
+    <%= f.label :white_wines, "White Wines" %>
+    <%= f.radio_button :white_wines, :White_Wines if :checked %>
+    <img src="http://xrume.com/wp-content/uploads/2015/06/white-wine.jpg" width="150px">
+    </label>
+
+  </div>
+
+  <div><%= f.submit "submit" %></div>
+
+<% end %>

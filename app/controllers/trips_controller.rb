@@ -11,7 +11,7 @@ class TripsController < ApplicationController
   trip = Trip.new(trip_params)
     if trip.save
       # session[:user_id] = trip.user_id
-      redirect_to root_path
+      redirect_to signup_path
     else
       redirect_to signup_path
     end
