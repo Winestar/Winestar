@@ -2,25 +2,31 @@ class UsersController < ApplicationController
   # form to creat users
   def new
   	@user = User.new
-  	render :new
+    render :new
   end
 
 # creates new users into db
   def create
   	@user = User.new(user_params)
-  	if @user.save
 
-      # redirected_to @user, notice: "Signed up successfully."
-  		# session[:user_id] = user.user_id
-  		redirect_to root_path
-  	else
-      # format.html { render action: "new"}
-  		redirect_to signup_path
-  	end
+    respond_to do |format|
+      if @user.save
+        # Tell the UserMailer to send a welcome email after save
+        UserMailer.welcome_email(@user).deliver
+
+        format.html { redirect_to root_path, alert: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
   end
+end
 
 #show current_user
   def show
+    @user = User.find(params[:id])
+    # render :show
   end
 
   private
