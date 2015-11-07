@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-
+	# root routes
+	root 'likes#new'
+	
   #form to create new trip
   get '/trips' => 'trips#new'
 
@@ -10,15 +12,12 @@ Rails.application.routes.draw do
   #show current user
   get 'trips/show'
 
+	#users routes home
+	get "/signup", to: "users#new"
 
-# root routes
-root 'likes#new'
-
-#users routes homie
-get "/signup", to: "users#new"
-resources :users, only: [:create]
-resources :likes, only: [:create]
-resources :trips
+	resources :users, only: [:create]
+	resources :likes, only: [:create]
+	resources :trips, only: [:create]
 
  
 

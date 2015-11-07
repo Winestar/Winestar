@@ -7,4 +7,9 @@ class UserMailer < ApplicationMailer
     mail(:to => user.email, :subject => "Thank you for signing up with Winestar!", :bcc => ['tlpride415@gmail.com'])
   end
 
+  def trip_info(trip)
+  	@trip = trip
+  	mail(:to => user.email, :subject => "Thank you for signing up with Winestar!", :bcc => ['tlpride415@gmail.com'])
+  end
+
 end

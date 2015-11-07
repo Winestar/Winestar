@@ -8,17 +8,18 @@ class TripsController < ApplicationController
 
   # creates new trip in db
   def create
-  trip = Trip.new(trip_params)
-    if trip.save
+  @trip = Trip.new(trip_params)
+    if @trip.save
       # session[:user_id] = trip.user_id
       redirect_to signup_path
     else
-      redirect_to signup_path
+      redirect_to trips_path
     end
   end
 
   # show current trip
   def show
+    @trip = Trip.find(params[:id])
   end
 
   def trip_params

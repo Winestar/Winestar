@@ -16,7 +16,7 @@ class LikesController < ApplicationController
       redirect_to trips_path
     else
       # format.html { render action: "new"}
-      redirect_to signup_path
+      redirect_to likes_path
     end
   end
 
