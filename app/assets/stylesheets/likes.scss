@@ -1,9 +1,15 @@
 /*// Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+
 html, body {
 	border: 0;
 	margin: 0;
+}
+
+h4, h5 {
+	font-weight: bold;
+	text-align: center;
 }
 
 label > input{ /* HIDE RADIO */
@@ -17,59 +23,65 @@ label > input + img{ /* IMAGE STYLES */
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border:2px solid #f00;
 }
-.navbar{
-	background-color: #e6e6e6;
-	margin-bottom: 5px;
-	border: none;
+
+.border {
+	border: 1px solid gray; 
 }
-.contact{
-	font-size: 11px;
-}
+
 .btn{
 	background-color: #f41010;
 	opacity: .8;
 	min-width: 330px;
 	margin: auto;
 }
-.img-responsive{
+
+.container {
+	margin: 0 auto;
 	width: 100%;
-	height: 200px;
 }
 
-.thumb {
-	margin-left: 20px;
-	width: 200px;
+.navbar {
+	background-color: #e6e6e6;
+  margin: 0;
+  border: 0;
+}
+
+.contact {
+	font-size: 11px;
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, 
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	padding-left: 0;
+  padding-right: 0;
+	width: 20em;
 }
 
 .thumbnail {
-	padding-left: 0;
-	width: 200px;
+	border: 0;
 }
 
 #brand{
-	margin-bottom: 0px;
+	display: inline;
+	margin-top: -.75em;
 	margin-left: 50px;
 	color: #2780e3;
 	font-size: 40px;
 	font-weight: bold;
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) 
-and (orientation : landscape) { 
-
-	.thumb {
-	margin-left: 20px;
-	width: 100px;
+#new_trip {
+  margin: 0 auto;
+  text-align: center;
 }
 
-.thumbnail {
-	padding-left: 0;
-	width: 100px;
+#trip_available_now {
+	border-radius: 50px;
 }
 
-
-
-
+@media screen and (max-width: 420px) {
+	.img-responsive, .thumbnail>img, .thumbnail a>img, 
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+		width: 12em;
+	}
 }

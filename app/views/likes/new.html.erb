@@ -1,9 +1,12 @@
+
 <!-- jumbotron -->
 <div class="jumbotron container">
-	<h4><center><b>What would you enjoy at Winery?</b></center></h4>
-	<h5><center>Pick anything that catches your eye</center></h5>
-
+    <img src=<%= asset_path"winestar.png" %> id="brand" width="55px">
+	<h4>What would you enjoy at Winery?</h4>
+	<h5>Pick anything that catches your eye</h5>
 </div>
+
+<div class="border"></div>
 
 <!-- preferencers form -->
 <%= form_for @like do |f| %>
