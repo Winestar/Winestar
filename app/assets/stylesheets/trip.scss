@@ -1,3 +1,45 @@
 // Place all the styles related to the trip controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.start_date {
+	display: inline;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+.departure_date {
+	display: inline;
+  margin: 0 auto;
+}
+
+#map{
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+}
+
+#new_trip {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#trip_available_now {
+	border-radius: 50px;
+}
+
+#trip_arrival_date, #trip_departure_date {
+	width: 30em;
+}
+
+#origin-input.controls {
+	display: inline;
+	top: 2em;
+}
+
+@media screen and (max-width: 420px) {
+	#trip_arrival_date, #trip_departure_date {
+	width: 9em;
+	}
+
+}

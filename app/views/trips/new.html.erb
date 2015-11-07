@@ -6,57 +6,52 @@
 </div>
 
 <div class="container col-sm-6 col-sm-offset-4">
-
+<br>
   <%= form_for (@trip) do |t| %>
   <%= t.check_box :available_now %>&nbsp;
   <%= t.label :available_now %><br>
+<br>
 
   <div class="row">
-    <p>Select Dates:</p>
-    <div clas="col-sm-3">
+    <p><%= label_tag :select_Dates %></p>
+    <div class="col-md-6 start_date">
       <%= t.date_field :arrival_date %> 
     </div>&nbsp;
-    <div clas="col-sm-3">
+    <div class="col-md-6 departure_date">
       <%= t.date_field :departure_date %> 
     </div>
   </div> <br>
-  <%= t.label :price_tag %>
-  <ol>
-    <%= check_box_tag 'Selected?', 1, false %>
-    <%= label_tag(:price_tag, "$") %>
   
-
-    <%= check_box_tag 'Selected?', 2, false %>
-    <%= label_tag(:price_tag, "$$") %>
-
-    <%= check_box_tag 'Selected?', 3, false %>
-    <%= label_tag(:price_tag, "$$$") %>
-
-    <%= check_box_tag 'Selected?', 4, false %>
-    <%= label_tag(:price_tag, "$$$$") %>
-  </ol>
+  <%= t.label :group_size %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= t.select :number_of_people, (1..9) %>
   <br>
 
-  <%= t.label :number_of_people %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <%= t.select :number_of_people, (1..9) %><br>
+  <ol>
+    <%= check_box_tag 'Selected?', 1, false %>
+    <%= label_tag(:price_tag, "$") %> &nbsp;
 
-<!--   <%= t.label :start_location %>
-  <%= t.text_field :start_location, placeholder: "Start Location" %> <br>
-  <%= t.label :end_location %>
-  <%= t.text_field :end_location, placeholder: "End Location" %> <br> -->
+    <%= check_box_tag 'Selected?', 2, false %>
+    <%= label_tag(:price_tag, "$$") %> &nbsp;
 
+    <%= check_box_tag 'Selected?', 3, false %>
+    <%= label_tag(:price_tag, "$$$") %> &nbsp;
 
-  <div id="map" style="height:250px;, width:200px;"></div>
+    <%= check_box_tag 'Selected?', 4, false %>
+    <%= label_tag(:price_tag, "$$$$") %> &nbsp;
+  </ol>
+
+  <div id="map"></div>
 
   <input id="origin-input" class="controls" name="trip[start_location]" type="text"
-  placeholder="Start Location">
+  placeholder="Start Location   "> 
   
   <input id="destination-input" class="controls" name="trip[end_location]" type="text"
   placeholder="End Location">
+  <br>
 
 <!-- Start Location End Location -->
 <div class=" container-fluid form-group">
-  <%= t.submit ("Save"), class: "btn btn-success", data:{ confirm: "Are you sure?" } %>
+  <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
   <% end %>
 </div>
 

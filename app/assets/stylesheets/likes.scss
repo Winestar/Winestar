@@ -70,14 +70,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 	font-weight: bold;
 }
 
-#new_trip {
-  margin: 0 auto;
-  text-align: center;
-}
-
-#trip_available_now {
-	border-radius: 50px;
-}
 
 @media screen and (max-width: 420px) {
 	.img-responsive, .thumbnail>img, .thumbnail a>img, 
