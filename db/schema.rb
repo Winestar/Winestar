@@ -11,17 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105020348) do
+ActiveRecord::Schema.define(version: 20151106211510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "likes", force: :cascade do |t|
-    t.string   "tours"
-    t.string   "red_wines"
-    t.string   "white_wines"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "vineyard_tours"
+    t.string   "cave_tours"
+    t.string   "great_views"
+    t.string   "food_pairing"
+    t.string   "groups"
+    t.string   "kid_friendly"
+    t.string   "dog_friendly"
+    t.string   "bachelorettes"
+    t.string   "picnics"
+    t.string   "staff_picks"
+    t.string   "organic_wineries"
+    t.string   "architecture"
+    t.string   "top_reds"
+    t.string   "top_whites"
+    t.string   "sparkling_wines"
+    t.string   "dessert_wines"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "trips", force: :cascade do |t|

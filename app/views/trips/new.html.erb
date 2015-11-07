@@ -1,73 +1,85 @@
+<!-- jumbotron -->
+<div class="jumbotron container">
+  <h4><center><b>What would you enjoy at Winery?</b></center></h4>
+  <h5><center>Pick anything that catches your eye</center></h5>
+</div>
 
-<%= form_for (@trip) do |t| %>
-  <%= t.label :available_now %>
-  <%= t.check_box :available_now %> <br>
+<div class="container col-sm-6 col-sm-offset-4">
 
-  <%= t.label :arrival_date %>
-  <%= t.date_field :arrival_date %> <br>
+  <%= form_for (@trip) do |t| %>
+  <%= t.check_box :available_now %>&nbsp;
+  <%= t.label :available_now %><br>
 
-  <%= t.label :departure_date %>
-  <%= t.date_field :departure_date %> <br>
+  <div class="row">
+    <p>Select Dates:</p>
+    <div clas="col-sm-3">
+      <%= t.date_field :arrival_date %> 
+    </div>&nbsp;
+    <div clas="col-sm-3">
+      <%= t.date_field :departure_date %> 
+    </div>
+  </div> <br>
+  <%= t.label :price_tag %>
+  <ol>
+    <%= check_box_tag 'Selected?', 1, false %>
+    <%= label_tag(:price_tag, "$") %>
+  
 
-  <%= t.label :number_of_people %>
+    <%= check_box_tag 'Selected?', 2, false %>
+    <%= label_tag(:price_tag, "$$") %>
+
+    <%= check_box_tag 'Selected?', 3, false %>
+    <%= label_tag(:price_tag, "$$$") %>
+
+    <%= check_box_tag 'Selected?', 4, false %>
+    <%= label_tag(:price_tag, "$$$$") %>
+  </ol>
+  <br>
+
+  <%= t.label :number_of_people %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <%= t.select :number_of_people, (1..9) %><br>
 
   <%= t.label :start_location %>
   <%= t.text_field :start_location, placeholder: "Start Location" %> <br>
-  
   <%= t.label :end_location %>
   <%= t.text_field :end_location, placeholder: "End Location" %> <br>
-
-  <%= t.label :price_tag %>
-  <li>
-      <%= check_box_tag 'Selected?', 1, false %>
-      <%= label_tag(:price_tag, "$") %>
-  </li>
-
-   <li>
-      <%= check_box_tag 'Selected?', 2, false %>
-      <%= label_tag(:price_tag, "$$") %>
-  </li>
-   <li>
-      <%= check_box_tag 'Selected?', 3, false %>
-      <%= label_tag(:price_tag, "$$$") %>
-  </li>
-   <li>
-      <%= check_box_tag 'Selected?', 4, false %>
-      <%= label_tag(:price_tag, "$$$$") %>
-  </li>
-  <br>
-
-  <%= t.submit ("Save"), class: "btn btn-success", data:{ confirm: "Are you sure?" } %>
-
-<% end %>
-
-<br><br>
-<hr>
-
-
-  <!-- Start Location End Location -->
-  <div class="form-group">
-
     <input id="origin-input" class="controls" type="text"
-    placeholder="Enter an origin location">
+  placeholder="Start Location">
+  <div id="map" style="height:250px;, width:200px;"></div>
 
-    <input id="destination-input" class="controls" type="text"
-    placeholder="Enter a destination location">
+  
+  <input id="destination-input" class="controls" type="text"
+  placeholder="End Location">
 
-    <div id="mode-selector" class="controls">
-      <input type="radio" name="type" id="changemode-walking" checked="checked">
-      <label for="changemode-walking">Walking</label>
+  
 
-      <input type="radio" name="type" id="changemode-transit">
-      <label for="changemode-transit">Transit</label>
+  
 
-      <input type="radio" name="type" id="changemode-driving">
-      <label for="changemode-driving">Driving</label>
-    </div>
+<!-- Start Location End Location -->
+<div class=" container-fluid form-group">
 
-    <div id="map" style="height:250px;"></div>
+
+
+
+
+
+  <div id="mode-selector" class="controls">
+    <input type="radio" name="type" id="changemode-walking" checked="checked">
+    <label for="changemode-walking">Walking</label>
+
+    <input type="radio" name="type" id="changemode-transit">
+    <label for="changemode-transit">Transit</label>
+
+    <input type="radio" name="type" id="changemode-driving">
+    <label for="changemode-driving">Driving</label>
   </div>
+
+</div>
+
+<%= t.submit ("Save"), class: "btn btn-success", data:{ confirm: "Are you sure?" } %>
+
+  <% end %>
+</div>
 
 
 
