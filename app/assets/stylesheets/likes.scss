@@ -73,12 +73,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 
 @media screen and (max-width: 420px) {
-	body{
-	width: 320px;
+	.btn{
+		min-width: 9em;
 	}
-	
+
 	.img-responsive, .thumbnail>img, .thumbnail a>img, 
 	.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-		width: 7em;
+		max-width: 4em;
 	}
 }
