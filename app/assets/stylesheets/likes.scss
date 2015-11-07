@@ -55,6 +55,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	padding-left: 0;
   padding-right: 0;
+  width: 20em;
 }
 
 .thumbnail {
@@ -72,6 +73,10 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 
 @media screen and (max-width: 420px) {
+	body{
+	width: 320px;
+	}
+	
 	.img-responsive, .thumbnail>img, .thumbnail a>img, 
 	.carousel-inner>.item>img, .carousel-inner>.item>a>img {
 		width: 7em;
