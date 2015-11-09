@@ -1,0 +1,190 @@
+/*// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+/* line 6, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+html, body {
+  border: 0;
+  margin: 0;
+}
+
+/* line 11, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+h4, h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 16, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+label > input {
+  /* HIDE RADIO */
+  visibility: hidden;
+  /* Makes input not-clickable */
+  position: absolute;
+  /* Remove input from document flow */
+}
+
+/* line 20, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+label > input + img {
+  /* IMAGE STYLES */
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+/* line 24, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+label > input:checked + img {
+  /* (RADIO CHECKED) IMAGE STYLES */
+  border: 2px solid #f00;
+}
+
+/* line 28, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.border {
+  border: 1px solid gray;
+}
+
+/* line 32, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.btn {
+  background-color: #f41010;
+  opacity: .8;
+  min-width: 330px;
+  margin: auto;
+}
+
+/* line 39, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+/* line 45, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.navbar {
+  background-color: #e6e6e6;
+  margin: 0;
+  border: 0;
+}
+
+/* line 51, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.contact {
+  font-size: 11px;
+}
+
+/* line 55, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.img-responsive, .thumbnail > img, .thumbnail a > img,
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  padding-left: 0;
+  padding-right: 0;
+  width: 20em;
+}
+
+/* line 62, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+.thumbnail {
+  border: 0;
+}
+
+/* line 66, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+#brand {
+  display: inline;
+  margin-top: -.75em;
+  margin-left: 50px;
+  color: #2780e3;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* line 75, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+#header {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 420px) {
+  /* line 79, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+  .btn {
+    min-width: 9em;
+  }
+
+  /* line 83, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/likes.scss */
+  .img-responsive, .thumbnail > img, .thumbnail a > img,
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-width: 6em;
+  }
+}
+/* line 5, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+.start_date {
+  display: inline;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+/* line 11, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+.departure_date {
+  display: inline;
+  margin: 0 auto;
+}
+
+/* line 16, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+#map {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 22, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+#new_trip {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 27, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+#trip_available_now {
+  border-radius: 50px;
+}
+
+/* line 31, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+#trip_arrival_date, #trip_departure_date {
+  width: 30em;
+}
+
+/* line 35, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+#origin-input.controls {
+  display: inline;
+  top: 2em;
+}
+
+@media screen and (max-width: 420px) {
+  /* line 41, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/trip.scss */
+  #trip_arrival_date, #trip_departure_date {
+    width: 9em;
+  }
+}
+/* line 5, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/users.scss */
+.row-fluid {
+  display: flex;
+  margin-bottom: 1.25em;
+}
+
+/* line 10, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/users.scss */
+#user_first_name, #user_last_name {
+  display: inline;
+  width: 50%;
+  float: left;
+}
+
+/* line 16, /Users/Rocky/wdi19/Winestar/app/assets/stylesheets/users.scss */
+#user_last_name {
+  bottom: 1.75em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
