@@ -11,7 +11,7 @@ class LikesController < ApplicationController
   # form to create like
   def new
     @like = Like.new
-    @user = user.find(params)
+    # @user = user.find(params)
     render :new
   end
   
