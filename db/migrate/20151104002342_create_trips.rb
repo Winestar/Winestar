@@ -8,6 +8,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :start_location
       t.string :end_location
       t.string :price_range
+      t.belongs_to :user
 
       t.timestamps null: false
     end

@@ -9,7 +9,6 @@ class CreateLikes < ActiveRecord::Migration
       t.string :kid_friendly
       t.string :dog_friendly
       t.string :bachelorettes
-      t.string :picnics
       t.string :staff_picks
       t.string :organic_wineries
       t.string :architecture
@@ -17,6 +16,7 @@ class CreateLikes < ActiveRecord::Migration
       t.string :top_whites
       t.string :sparkling_wines
       t.string :dessert_wines
+      t.string :picnic
 
       t.timestamps null: false
     end

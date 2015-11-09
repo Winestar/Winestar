@@ -71,7 +71,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 	font-weight: bold;
 }
 
-
+#header{
+	margin-bottom: 10px;
+}
 @media screen and (max-width: 420px) {
 	body{
 	width: 320px;

@@ -1,4 +1,4 @@
-<div class="jumbotron container">
+<div class="jumbotron container" id="header">
     <h3><center><b>Tell us about yourself</b></center></h3>
     <h4><center>Let us know how to contact you.</center></h4>
 
@@ -7,28 +7,35 @@
 
 <div class="container-fluid col-sm-4 col-sm-offset-4">
 
-    <%= form_for (@user) do |f| %>
+
+
+    <%= form_for(@user, :builder => Judge::FormBuilder) do |f| %>
+    
+    <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>
+    <% end %>
+
         <div class ="control-group">
 
             <div class="controls controls-row row-fluid">
                 <!-- <div class="col-sm-6" id="inline"> -->
-                    <%= f.text_field :first_name, placeholder: "First Name", class:"form-control" %><br>
+                    <%= f.text_field :first_name, :validate => true, placeholder: "First Name", class:"form-control", id:"val" %><br>&nbsp;&nbsp;
                 <!-- </div> -->
                 <!-- <div class="col-sm-6" id="inline"> -->
                     <%= f.text_field :last_name, placeholder: "Last Name", class:"form-control" %><br>
                 <!-- </div>             -->
             </div>
         
-            <%= f.text_field :phone_number, placeholder: "Mobile Number", class:"form-control" %><br>
-            <%= f.text_field :email, placeholder: "Email", class:"form-control" %><br>
-            <%= f.password_field :password, placeholder: "Password", class:"form-control" %><br>
+            <%= f.text_field :phone_number, :validate => true, placeholder: "Mobile Number", class:"form-control" %><br>
+            <%= f.text_field :email, :validate => true, placeholder: "Email", class:"form-control", id:"email"%><br>
+            <%= f.password_field :password, :validate => true, placeholder: "Password", class:"form-control", id:"password" %><br>
             <%= f.password_field :password, placeholder: "Re-Enter Password", class:"form-control" %><br>
     
             
             <!-- radio button -->
             <div class="field">
                 <p class="contact"><b>How would you like to be contacted?</b> (Choose one or both)</p>
-                 <%= check_box_tag(:contact_email, "Email") %>
+                 <%= check_box_tag(:contact_email) %>
                 <%= label_tag(:contact_email, "Email") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <%= check_box_tag(:contact_text) %>
                 <%= label_tag(:contact_text, "Mobile SMS") %>

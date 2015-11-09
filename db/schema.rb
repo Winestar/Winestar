@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106211510) do
+ActiveRecord::Schema.define(version: 20151108031126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20151106211510) do
     t.string   "kid_friendly"
     t.string   "dog_friendly"
     t.string   "bachelorettes"
-    t.string   "picnics"
     t.string   "staff_picks"
     t.string   "organic_wineries"
     t.string   "architecture"
@@ -33,9 +32,13 @@ ActiveRecord::Schema.define(version: 20151106211510) do
     t.string   "top_whites"
     t.string   "sparkling_wines"
     t.string   "dessert_wines"
+    t.string   "picnic"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "user_id"
   end
+
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "trips", force: :cascade do |t|
     t.boolean  "available_now"
