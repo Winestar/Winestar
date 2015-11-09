@@ -27,10 +27,10 @@
             
             <!-- radio button -->
             <div class="field">
-                <p class="contact"><b>How would you like to be contacted?</b> (Choose one or both)</p>
-                 <%= check_box_tag(:contact_email, "Email") %>
+                <p class="contact" ><b>How would you like to be contacted?</b> (Choose one or both)</p>
+                 <%= check_box_tag 'contact_email', 'yes', true %>
                 <%= label_tag(:contact_email, "Email") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag(:contact_text) %>
+                <%= check_box_tag 'contact_text', 'yes', true %>
                 <%= label_tag(:contact_text, "Mobile SMS") %>
             </div>
         </div><br>

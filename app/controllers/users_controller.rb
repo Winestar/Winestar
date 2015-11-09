@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # form to creat users
   def new
   	@user = User.new
+    @like = Like.new
     render :new
   end
 

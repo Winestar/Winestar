@@ -9,7 +9,10 @@
 <div class="border"></div>
 
 <!-- preferencers form -->
-<%= form_for @like do |f| %>
+<!-- <%= form_for @like do |f| %> -->
+
+<!-- a test preference form -->
+<%= form_for(@like, controller: "likes", action: "preference", method: "post") do |f|%>
 
 <div class="container">
 	<div class="col-xs-3 thumb img-responsive">
@@ -151,6 +154,11 @@
     </div>
 </div>
 
-<div class="col-sm-4 col-sm-offset-4"><%= f.submit "submit", class: "btn btn-danger"%></div><br>
+<!-- Submit form -->
+<!-- <div class="col-sm-4 col-sm-offset-4"><%= f.submit "submit", class: "btn btn-danger"%></div><br> -->
+
+<!-- A test submit form -->
+<%= submit_tag "Submit"%>
+<% end %>
 
 <% end %>

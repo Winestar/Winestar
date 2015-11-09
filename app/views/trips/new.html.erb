@@ -8,7 +8,7 @@
 <div class="container col-sm-6 col-sm-offset-4">
 <br>
   <%= form_for (@trip) do |t| %>
-  <%= t.check_box :available_now %>&nbsp;
+  <%= t.check_box :available_now if :checked %> &nbsp;
   <%= t.label :available_now %><br>
 <br>
 
@@ -27,18 +27,20 @@
   <br>
 
   <ol>
-    <%= check_box_tag 'Selected?', 1, false %>
+    <%= check_box :price_tag, value=1 if :checked %>
     <%= label_tag(:price_tag, "$") %> &nbsp;
 
-    <%= check_box_tag 'Selected?', 2, false %>
+    <%= check_box :price_tag, value=2 if :checked %>
     <%= label_tag(:price_tag, "$$") %> &nbsp;
 
-    <%= check_box_tag 'Selected?', 3, false %>
+    <%= check_box :price_tag, value=3 if :checked %>
     <%= label_tag(:price_tag, "$$$") %> &nbsp;
 
-    <%= check_box_tag 'Selected?', 4, false %>
+    <%= check_box :price_tag, value=4 if :checked %>
     <%= label_tag(:price_tag, "$$$$") %> &nbsp;
   </ol>
+
+
 
   <div id="map"></div>
 
@@ -54,6 +56,4 @@
   <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
   <% end %>
 </div>
-
-
-
+22

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 	#users routes home
 	get "/signup", to: "users#new"
 
+	post 'likes/:id/preference' => 'likes#preference'
+
 	resources :users, only: [:create]
 	resources :likes, only: [:create]
 	resources :trips, only: [:create]

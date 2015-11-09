@@ -1,8 +1,17 @@
 class LikesController < ApplicationController
   
+  def index
+    @likes = Like.all
+  end
+
+  # def show
+  #   @like = Like.find(params[:id])
+  # end
+
   # form to create like
   def new
     @like = Like.new
+    @user = user.find
     render :new
   end
   
@@ -19,6 +28,7 @@ class LikesController < ApplicationController
       redirect_to likes_path
     end
   end
+
 
   private
   def like_params
