@@ -9,7 +9,6 @@ one:
   kid_friendly: MyString
   dog_friendly: MyString
   bachelorettes: MyString
-  picnics: MyString
   staff_picks: MyString
   organic_wineries: MyString
   architecture: MyString
@@ -17,6 +16,7 @@ one:
   top_whites: MyString
   sparkling_wines: MyString
   dessert_wines: MyString
+  picnic: MyString
 
 two:
   vineyard_tours: MyString
@@ -27,7 +27,6 @@ two:
   kid_friendly: MyString
   dog_friendly: MyString
   bachelorettes: MyString
-  picnics: MyString
   staff_picks: MyString
   organic_wineries: MyString
   architecture: MyString
@@ -35,3 +34,4 @@ two:
   top_whites: MyString
   sparkling_wines: MyString
   dessert_wines: MyString
+  picnic: MyString
