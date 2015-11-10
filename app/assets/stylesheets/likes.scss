@@ -11,6 +11,10 @@ h4, h5 {
 	font-weight: bold;
 	text-align: center;
 }
+p{
+	text-align: center;
+	font-size: 10px;
+}
 
 label > input{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
@@ -29,10 +33,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .btn{
+	display: block;
 	background-color: #f41010;
 	opacity: .8;
-	min-width: 330px;
-	margin: auto;
+	width: 300px;
+	margin: 0 auto;
+	float: none;
 }
 
 .container {
@@ -43,8 +49,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .navbar {
 	background-color: #e6e6e6;
-  margin: 0;
-  border: 0;
+  	margin: 0;
+  	border: 0;
 }
 
 .contact {
@@ -70,7 +76,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 	font-size: 40px;
 	font-weight: bold;
 }
-
+.jumbotron{
+	height: 150px;
+}
 #header{
 	margin-bottom: 10px;
 }
