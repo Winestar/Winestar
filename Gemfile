@@ -29,7 +29,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'judge'
 
 
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -39,6 +38,8 @@ gem 'judge'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+	gem 'pry'
+	gem 'pry-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

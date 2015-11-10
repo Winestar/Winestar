@@ -11,6 +11,10 @@
 <!-- preferencers form -->
 <%= form_for @like do |f| %>
 
+<% flash.each do |name, msg| %>
+       <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>
+<% end %>
+
 <div class="container">
 	<div class="col-xs-3 thumb img-responsive">
 		<a class="thumbnail" href="#">
@@ -151,6 +155,6 @@
     </div>
 </div>
 
-<div class="col-sm-4 col-sm-offset-4"><%= f.submit "Next", class: "btn btn-danger"%></div><br>
+<div class="col-sm-4 col-sm-offset-4"><%= button_to "Next", users_path, method: :post, class: "btn btn-success", id: "next" %></div><br>
 
 <% end %>
