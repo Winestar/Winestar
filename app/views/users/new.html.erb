@@ -35,10 +35,10 @@
             <!-- radio button -->
             <div class="field">
 
-                <p class="contact"><b>How would you like to be contacted?</b> (Choose one or both)</p>
-                 <%= check_box_tag(:contact_email) %>
+                <p class="contact"><b>How would you like to be contacted?</b> (Choose one or both)</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %>
                 <%= label_tag(:contact_email, "Email") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'contact_text', 'yes', true %>
+                <%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, "contact_text", nil %>
                 <%= label_tag(:contact_text, "Mobile SMS") %>
             </div>
         </div><br>

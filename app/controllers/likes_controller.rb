@@ -32,7 +32,7 @@ class LikesController < ApplicationController
 
   private
   def like_params
-    params.require(:like).permit(:vineyard_tours, :cave_tours, :great_views, :food_pairing, :groups, :kid_friendly, :dog_friendly, :bachelorettes, :picnics, :staff_picks, :organic_wineries, :architectiure, :top_reds, :top_whites, :sparkling_wines, :dessert_wines)
+    params.require(:like).permit(:vineyard_tours, :cave_tours, :great_views, :food_pairing, :groups, :kid_friendly, :dog_friendly, :bachelorettes, :picnic, :staff_picks, :organic_wineries, :architecture, :top_reds, :top_whites, :sparkling_wines, :dessert_wines)
   end
 
 end

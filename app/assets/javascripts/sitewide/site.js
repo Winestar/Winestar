@@ -1,4 +1,5 @@
 $(function(){
+  
 
 //   judge.validate(document.getElementById('val'), {
 //   valid: function(element) {
