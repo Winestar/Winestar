@@ -10,13 +10,16 @@
 
 <!-- preferencers form -->
 <%= form_for @like do |f| %>
+<<<<<<< HEAD
 
 <% flash.each do |name, msg| %>
        <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>
 <% end %>
+=======
+>>>>>>> 5ffc707466ecfeae611ed799710f5332ee5a82f5
 
 <div class="container">
-	<div class="col-xs-3 thumb img-responsive">
+	<div class="col-xs-2 thumb img-responsive">
 		<a class="thumbnail" href="#">
 			<label>
 				<%= f.radio_button :vineyard_tours, :vineyard_tours if :checked %>
@@ -24,7 +27,7 @@
 			</label>
 		</a>
 	</div>
-	<div class="col-xs-3 thumb img-responsive">
+	<div class="col-xs-2 thumb img-responsive">
 		<a class="thumbnail" href="#">
 			<label>
 				<%= f.radio_button :cave_tours, :cave_tours if :checked %>
@@ -33,7 +36,7 @@
 
 		</a>
 	</div>
-	<div class="col-xs-3 thumb img-responsive">
+	<div class="col-xs-2 thumb img-responsive">
 		<a class="thumbnail" href="#">
 			<label>
 				<%= f.radio_button :great_views, :great_views if :checked %>
@@ -41,7 +44,7 @@
 			</label>
 		</a>
 	</div>
-	<div class="col-xs-3 thumb img-responsive">
+	<div class="col-xs-2 thumb img-responsive">
         <a class="thumbnail" href="#">
             <label>
                 <%= f.radio_button :food_pairing, :food_pairing if :checked %>
