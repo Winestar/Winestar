@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'judge'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 
 
 # Use Unicorn as the app server
