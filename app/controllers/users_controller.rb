@@ -7,10 +7,15 @@ class UsersController < ApplicationController
 
 # creates new users into db
   def create
-  	@user = User.new(user_params)
+  	# @user = User.new(user_params)
+    @user = user_params ? User.new(user_params) : User.new_guest
 
     respond_to do |format|
       if @user.save
+        flash[:notice] = "You Signed up successfully"
+
+        session[:user_id] = @user.id
+
         # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver
 

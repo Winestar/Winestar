@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
 	# config/routes.rb
 	mount Judge::Engine => '/judge'
 
@@ -17,7 +23,10 @@ Rails.application.routes.draw do
 	#users routes home
 	get "/signup", to: "users#new"
 
-	post 'likes/:id/preference' => 'likes#preference'
+		# Sesions routes
+	get "/login", to: "sessions#new"
+	post "/logout", to: "sessions#destroy"
+	resources :sessions, only: [:create]
 
 	resources :users, only: [:create]
 	resources :likes, only: [:create]
