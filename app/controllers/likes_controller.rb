@@ -19,7 +19,7 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(like_params)
     if @like.save
-
+      # @user = current_user
       # redirected_to @user, notice: "Signed up successfully."
       # session[:user_id] = user.user_id
       redirect_to trips_path

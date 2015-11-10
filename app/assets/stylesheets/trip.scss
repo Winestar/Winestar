@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
+	background-color: green;
+	border: 2px solid black;
+}
+
 .start_date {
 	display: inline;
   margin: 0 auto;
@@ -11,6 +16,11 @@
 .departure_date {
 	display: inline;
   margin: 0 auto;
+}
+
+.priceRange {
+	border: 1px solid black;
+	width: 3em;
 }
 
 #map{
@@ -32,9 +42,19 @@
 	width: 30em;
 }
 
-#origin-input.controls {
-	display: inline;
-	top: 2em;
+#origin-input {
+  position: absolute;
+  top: 4em;
+  width: 50%;
+  height: 3em;
+}
+
+#destination-input,  {
+  position: absolute;
+  top: 4em;
+  width: 50%;
+  height: 3em;
+
 }
 
 @media screen and (max-width: 420px) {

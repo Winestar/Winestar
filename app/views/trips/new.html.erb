@@ -26,26 +26,26 @@
   <%= t.select :number_of_people, (1..9) %>
   <br>
 
-  <ol>
-    <%= check_box :price_tag, value=1 if :checked %>
-    <%= label_tag(:price_tag, "$") %> &nbsp;
+  <div class="row">
+    <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
+    <%= label_tag(:price_range, "$") %> &nbsp;
 
-    <%= check_box :price_tag, value=2 if :checked %>
-    <%= label_tag(:price_tag, "$$") %> &nbsp;
+    <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
+    <%= label_tag(:price_range, "$$") %> &nbsp;
 
-    <%= check_box :price_tag, value=3 if :checked %>
-    <%= label_tag(:price_tag, "$$$") %> &nbsp;
+    <%= t.check_box :price_range, {:class => "priceRange" }, 3, nil %>
+    <%= label_tag(:price_range, "$$$") %> &nbsp;
 
-    <%= check_box :price_tag, value=4 if :checked %>
-    <%= label_tag(:price_tag, "$$$$") %> &nbsp;
-  </ol>
+    <%= t.check_box :price_range, {:class => "priceRange" }, 4, nil %>
+    <%= label_tag(:price_range, "$$$$") %> &nbsp;    
+  </div>
 
 
 
   <div id="map"></div>
 
   <input id="origin-input" class="controls" name="trip[start_location]" type="text"
-  placeholder="Start Location   "> 
+  placeholder="Start Location">
   
   <input id="destination-input" class="controls" name="trip[end_location]" type="text"
   placeholder="End Location">
