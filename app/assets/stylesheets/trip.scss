@@ -2,21 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
-  border: 1px solid silver;
-  color: silver;
-  cursor: pointer;
-  width: 24.99%;
-  float: left;
-  height: 3em;
-  margin: 0;
-  padding-top: 10px;
-}
-
-
-label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, label:nth-child(8):hover { /* (RADIO CHECKED) IMAGE STYLES */
-  background-color: rgba(0,255,0,.3);
-}
 
 #new_trip > div:nth-child(8) > p > label {
 	font-size: 1em;
@@ -34,8 +19,7 @@ label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, la
 }
 
 .priceRange {
-	border: 1px solid black;
-	width: 3em;
+	width: 1em;
 }
 
 .price-container {
@@ -43,6 +27,12 @@ label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, la
 	border-radius: 5px;
   width: 40%;
   margin: 0 auto;
+}
+
+#new_trip > label:nth-child(15), #new_trip > label:nth-child(17) ,
+#new_trip > label:nth-child(19), #new_trip > label:nth-child(21) {
+  left: -0.3em; 
+  position: relative;
 }
 
 #map{
@@ -63,26 +53,6 @@ label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, la
 
 #trip_arrival_date, #trip_departure_date {
 	width: 30em;
-}
-
-#trip_price_range {
-  position: absolute; /* Remove input from document flow */	
-}
-
-#trip_price_range.one[type=checkbox]:checked + label:nth-child(2) {
-  border: 2px solid green;
-}
-
-#trip_price_range.two[type=checkbox]:checked + label:nth-child(4) {
-  border: 2px solid red;
-}
-
-#trip_price_range.three[type=checkbox]:checked + label:nth-child(6) {
-  border: 2px solid purple;
-}
-
-#trip_price_range.four [type=checkbox]:checked + label:nth-child(8) {
-  border: 2px solid orange;
 }
 
 #origin-input {
