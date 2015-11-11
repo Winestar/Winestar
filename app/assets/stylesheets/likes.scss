@@ -7,13 +7,16 @@ html, body {
 	margin: 0;
 }
 
-h4, h5 {
+h3{
 	font-weight: bold;
 	text-align: center;
+	margin-top: 50px;
+	font-size: 25px;
+
 }
-p{
+h4{
 	text-align: center;
-	font-size: 10px;
+	font-size: 20px;
 }
 
 label > input{ /* HIDE RADIO */
@@ -24,8 +27,9 @@ label > input + img{ /* IMAGE STYLES */
   cursor:pointer;
   border:2px solid transparent;
 }
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid #f00;
+label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
+  border:5px solid #f00;
+  background-image: url('http://d3thflcq1yqzn0.cloudfront.net/042938928_iconv.jpeg')
 
 }
 
@@ -80,10 +84,20 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 	font-weight: bold;
 }
 .jumbotron{
-	height: 150px;
+	height: 200px;
 }
 #header{
 	margin-bottom: 10px;
+}
+#like-div{
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 280){
+    .img-responsive
+     {
+        min-width: 10000px;
+    }
 }
 /*@media screen and (max-width: 420px) {
 	.btn{

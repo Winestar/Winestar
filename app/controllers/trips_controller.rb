@@ -1,19 +1,30 @@
 class TripsController < ApplicationController
 	#
   def new
-  	@trip = Trip.new
+    @trip = current_user.trips.new
+  	# @trip = Trip.new
     @available_now = :available_now
   	render :new
   end
 
   # creates new trip in db
   def create
-  @trip = Trip.new(trip_params)
-    if @trip.save
-      # session[:user_id] = trip.user_id
-      redirect_to signup_path
-    else
-      redirect_to trips_path
+  @trip = current_user.trips.create!(trip_params)
+
+     respond_to do |format|
+      if @trip.save
+
+        # flash[:notice] = "You Signed up successfully"
+
+        # Tell the UserMailer to send a welcome email after save
+        UserMailer.trip_email(@trip).deliver
+
+        format.html { redirect_to signup_path}
+        format.json { render :show, status: :created, location: @trip }
+      else
+        format.html { redirect_to root_path}
+        format.json { render json: @trip.errors, status: :unprocessable_entity }
+      end
     end
   end
 

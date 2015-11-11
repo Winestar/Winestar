@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # form to creat users
-  def new
+  def edit
   	@user = User.new
     render :new
   end
@@ -8,13 +8,14 @@ class UsersController < ApplicationController
 # creates new users into db
   def create
   	# @user = User.new(user_params)
-    @user = user_params ? User.new(user_params) : User.new_guest
+    @user = params[:user] ? User.new(user_params) : User.new_guest
 
     respond_to do |format|
       if @user.save
-        flash[:notice] = "You Signed up successfully"
-
+        current_user.move_to(@user) if current_user && current_user.guest?
         session[:user_id] = @user.id
+
+        # flash[:notice] = "You Signed up successfully"
 
         # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver
@@ -28,6 +29,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    redirect_to root_path
+
+  end
+
+
 #show current_user
   def show
     @user = User.find(params[:id])
@@ -36,7 +45,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-  	params.require(:user).permit(:first_name, :last_name, :phone_number, :email, :password, :contact_email, :contact_text)
+  	params.require(:user).permit(:first_name, :last_name, :phone_number, :email, :password, :contact_email, :contact_text, :guest)
   end
 
 

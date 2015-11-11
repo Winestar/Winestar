@@ -1,13 +1,12 @@
 <!-- jumbotron -->
 <div class="jumbotron container">
-  <img src=<%= asset_path"winestar.png" %> id="brand" width="55px">
-  <h4><center><b>What are you looking for today?</b></center></h4>
-  <h5><center>Pick anything that catches your eye</center></h5>
+  <h3>What are you looking for today?</h3>
+  <h4>Pick anything that catches your eye</h4>
 </div>
 
 <div class="container col-sm-6 col-sm-offset-4">
 <br>
-  <%= form_for (@trip) do |t| %>
+  <%= form_for Trip.new do |t| %>
   <%= t.check_box :available_now if :checked %> &nbsp;
   <%= t.label :available_now %><br>
 <br>

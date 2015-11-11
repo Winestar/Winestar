@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :trips, dependent: :destroy
 	has_many :userpicks
-	has_many :likes, through: :userpicks, dependent: :destroy
+	has_many :likes, dependent: :destroy
 	# has_and_belongs_to_many :likes, join_table: "likes_users", association_foreign_key: "like_id"
 
   	validates :first_name, :presence => true, length: { minimum: 2 }, :presence => {:message => "can't be empty"}, unless: :guest?
@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
 	def self.new_guest
 		new { |u| u.guest = true }
 	end
+
+	def move_to(user)
+       likes.update_all(user_id: user.id)
+    end
 
 
 end
