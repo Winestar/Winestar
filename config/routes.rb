@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 	post "/logout", to: "sessions#destroy"
 	resources :sessions, only: [:create]
 
-	resources :users
+	resources :users, only: [:create, :update, :edit]
 	resources :likes, only: [:create]
 	resources :trips, only: [:create]
 

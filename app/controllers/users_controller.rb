@@ -22,8 +22,11 @@ class UsersController < ApplicationController
 
         format.html { redirect_to likes_path}
         format.json { render :show, status: :created, location: @user }
+        # if @user.first_name != nil
+        #   redirect_to profile_path
+        # end
       else
-        format.html { redirect_to signup_path}
+        format.html { redirect_to root_path}
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -33,7 +36,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
-    redirect_to root_path
+    redirect_to profile_path
 
   end
 

@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
 	# method which will update the user info from the params from the user  id
 	def move_to(user)
        likes.update_all(user_id: user.id)
-    end
+  end
 
 
 end

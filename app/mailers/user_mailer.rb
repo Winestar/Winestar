@@ -19,7 +19,7 @@ class UserMailer < ApplicationMailer
   def trip_email(trip)
     @trip = trip
     mail(:to => 'rnchau@mail.sfsu.edu', 
-    	:subject => "Trip Information of the user with user id!", :bcc => ['tlpride415@gmail.com', 'Julie.Vaughn@gmail.com', 'joeruef@gmail.com', 'kshah3@babson.edu', 'leogarver@gmail.com'])
+    	:subject => "Trip Information of the user with user id!", :bcc => ['tlpride415@gmail.com'])
   end
 
  

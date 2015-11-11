@@ -13,9 +13,6 @@ label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
   padding-top: 10px;
 }
 
-label:nth-child(2):checked, label:nth-child(4):checked, label:nth-child(6):checked, label:nth-child(8):checked { /* (RADIO CHECKED) IMAGE STYLES */
-  background-color: rgba(0,255,0,.3);
-}
 
 label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, label:nth-child(8):hover { /* (RADIO CHECKED) IMAGE STYLES */
   background-color: rgba(0,255,0,.3);
@@ -69,8 +66,23 @@ label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, la
 }
 
 #trip_price_range {
-  visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */	
+}
+
+#trip_price_range.one[type=checkbox]:checked + label:nth-child(2) {
+  border: 2px solid green;
+}
+
+#trip_price_range.two[type=checkbox]:checked + label:nth-child(4) {
+  border: 2px solid red;
+}
+
+#trip_price_range.three[type=checkbox]:checked + label:nth-child(6) {
+  border: 2px solid purple;
+}
+
+#trip_price_range.four [type=checkbox]:checked + label:nth-child(8) {
+  border: 2px solid orange;
 }
 
 #origin-input {
