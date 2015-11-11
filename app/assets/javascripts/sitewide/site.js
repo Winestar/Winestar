@@ -23,9 +23,9 @@ $(function(){
   
 //hiding the button
 $('#next').click(function() {
-if($('input[name=like[vineyard_tours]]:checked').length<1 || $('input[name=like[vineyard_tours]]:checked').length >4 )
+if(($('input[name=like[vineyard_tours]]:checked').length>4) || ($('input[name=like[vineyard_tours]]:checked').length<1))
 {
-alert("Please select up to 4 preferences")
+alert("Please Select Up To 4 that you prefer")
 event.preventDefault();
 }
 })
