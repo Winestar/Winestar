@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 	mount Judge::Engine => '/judge'
 
 	# root routes
-	root 'likes#new'
+	root 'splash#new'
+
+	get '/likes' => 'likes#new'
 	
  	#form to create new trip
  	get '/trips' => 'trips#new'

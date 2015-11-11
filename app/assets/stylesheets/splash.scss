@@ -1,0 +1,31 @@
+#image {
+	background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://farm6.staticflickr.com/5650/22743510430_af2dcc54f9_b.jpg"); 
+  background-position: center center;
+}
+
+#splash_intro {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	margin: 7em auto;
+}
+
+.button_to {
+	float: none;
+	text-align: center;
+	margin-top: 23em;
+}
+
+.btn-default {
+	background-color: white;
+	color: red;
+}
+
+#logo {
+  height: 5em;
+  width: 5em;
+  margin: 1em auto;
+  display: block;
+}

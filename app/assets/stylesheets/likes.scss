@@ -3,20 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 html, body {
-	border: 0;
-	margin: 0;
+    border: 0;
+    margin: 0;
 }
 
 h3{
-	font-weight: bold;
-	text-align: center;
-	margin-top: 50px;
-	font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
 
 }
 h4{
-	text-align: center;
-	font-size: 20px;
+    text-align: center;
+    font-size: 20px;
 }
 
 label > input{ /* HIDE RADIO */
@@ -34,63 +34,63 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .border {
-	border: 1px solid gray; 
+    border: 1px solid gray; 
 }
 
 .btn{
-	display: block;
-	background-color: #f41010;
-	opacity: .8;
-	width: 300px;
-	margin: 0 auto;
-	float: none;
+    display: block;
+    background-color: #f41010;
+    opacity: .8;
+    width: 300px;
+    margin: 0 auto;
+    float: none;
 }
 
 .container {
-	margin: 0 auto;
-	width: 100%;
-	padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
 }
 
 .navbar {
-	background-color: #e6e6e6;
-  	margin: 0;
-  	border: 0;
+    background-color: #e6e6e6;
+      margin: 0;
+      border: 0;
 }
 
 .contact {
-	font-size: 11px;
+    font-size: 11px;
 }
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-	padding-left: 0;
+    padding-left: 0;
   padding-right: 0;
   width: 20em;
 }
 
 .thumbnail {
-	border: 0;
+    border: 0;
 }
 #user_contact_email{
-	margin-left: 100px;
+    margin-left: 100px;
 }
 #brand{
-	display: inline;
-	margin-top: -.75em;
-	margin-left: 50px;
-	color: #2780e3;
-	font-size: 40px;
-	font-weight: bold;
+    display: inline;
+    margin-top: -.75em;
+    margin-left: 50px;
+    color: #2780e3;
+    font-size: 40px;
+    font-weight: bold;
 }
 .jumbotron{
-	height: 200px;
+    height: 200px;
 }
 #header{
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 #like-div{
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 280){
@@ -100,12 +100,12 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
     }
 }
 /*@media screen and (max-width: 420px) {
-	.btn{
-		min-width: 9em;
-	}
+    .btn{
+        min-width: 9em;
+    }
 
-	.img-responsive, .thumbnail>img, .thumbnail a>img, 
-	.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-		max-width: 6em;
-	}*/
+    .img-responsive, .thumbnail>img, .thumbnail a>img, 
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        max-width: 6em;
+    }*/
 /*}*/
