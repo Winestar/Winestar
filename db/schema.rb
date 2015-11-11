@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(version: 20151110011122) do
     t.integer "user_id"
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "trips", force: :cascade do |t|
     t.boolean  "available_now"
     t.date     "arrival_date"

@@ -32,12 +32,14 @@
                     <p>Email<%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %><p>
                     <p>Mobile Number&nbsp;&nbsp;&nbsp;<%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, "    contact_text", nil %></p>
                 </div>
+
+               
             </div>
 
         </div>
         <br>
     
-    <%= f.submit "Submit", class: "btn btn-primary"%>
+    <%= f.submit "Submit",  class: "btn btn-primary"%>
 
     <% end %> 
 </div>

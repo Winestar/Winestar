@@ -16,8 +16,7 @@
 }
 
 .priceRange {
-	border: 1px solid black;
-	width: 3em;
+	width: 1em;
 }
 
 .price-container {
@@ -25,6 +24,12 @@
 	border-radius: 5px;
   width: 40%;
   margin: 0 auto;
+}
+
+#new_trip > label:nth-child(15), #new_trip > label:nth-child(17) ,
+#new_trip > label:nth-child(19), #new_trip > label:nth-child(21) {
+  left: -0.3em; 
+  position: relative;
 }
 
 #map{
