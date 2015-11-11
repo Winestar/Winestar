@@ -3,8 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
-	background-color: green;
-	border: 2px solid black;
+  border: 1px solid silver;
+  color: silver;
+  cursor: pointer;
+  width: 24.99%;
+  float: left;
+  height: 3em;
+  margin: 0;
+  padding-top: 10px;
+}
+
+label:nth-child(2):checked, label:nth-child(4):checked, label:nth-child(6):checked, label:nth-child(8):checked { /* (RADIO CHECKED) IMAGE STYLES */
+  background-color: rgba(0,255,0,.3);
+}
+
+label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, label:nth-child(8):hover { /* (RADIO CHECKED) IMAGE STYLES */
+  background-color: rgba(0,255,0,.3);
+}
+
+#new_trip > div:nth-child(8) > p > label {
+	font-size: 1em;
+	text-align: none;
+}
+
+.jumbotron {
+	height: 75px;
 }
 
 .start_date {
@@ -23,10 +46,18 @@ label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
 	width: 3em;
 }
 
+.price-container {
+	border: 1px solid silver;
+	border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+}
+
 #map{
-	height: 300px;
-	width: 300px;
+	height: 200px;
+	width: 275px;
 	margin: 0 auto;
+	top: 1em;
 }
 
 #new_trip {
@@ -42,24 +73,34 @@ label:nth-child(2), label:nth-child(4), label:nth-child(6), label:nth-child(8) {
 	width: 30em;
 }
 
+#trip_price_range {
+  position: absolute; /* Remove input from document flow */	
+}
+
 #origin-input {
-  position: absolute;
-  top: 4em;
-  width: 50%;
+	border: 2px solid silver;
+	border-radius: 5px;
+  left: 3.5em !important;
+  width: 70%;
   height: 3em;
 }
 
-#destination-input,  {
-  position: absolute;
-  top: 4em;
-  width: 50%;
-  height: 3em;
+#destination-input {
+	border: 2px solid silver;
+	border-radius: 5px;
+	left: 3.5em!important;
+  top: 4em!important;
+  width: 70%;
+  height: 3em; 
+}
 
+#select-dates {
+	font-size: 1em;
 }
 
 @media screen and (max-width: 420px) {
 	#trip_arrival_date, #trip_departure_date {
-	width: 9em;
+	width: 8em;
 	}
 
 }

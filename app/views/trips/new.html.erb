@@ -12,31 +12,29 @@
 <br>
 
   <div class="row">
-    <p><%= label_tag :select_Dates %></p>
+    <p id="select-dates"><%= label_tag :select_Dates %></p>
     <div class="col-md-6 start_date">
       <%= t.date_field :arrival_date %> 
     </div>&nbsp;
     <div class="col-md-6 departure_date">
       <%= t.date_field :departure_date %> 
     </div>
-  </div> <br>
-  
+  </div> <br> 
   <%= t.label :group_size %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <%= t.select :number_of_people, (1..9) %>
-  <br>
+  <br><br>
 
-  <div class="row">
+  <div class="row price-container">
     <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
-    <%= label_tag(:price_range, "$") %> &nbsp;
+    <%= label_tag(:price_range, "$") %>
 
     <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
-    <%= label_tag(:price_range, "$$") %> &nbsp;
-
+    <%= label_tag(:price_range, "$$") %> 
     <%= t.check_box :price_range, {:class => "priceRange" }, 3, nil %>
-    <%= label_tag(:price_range, "$$$") %> &nbsp;
+    <%= label_tag(:price_range, "$$$") %>
 
     <%= t.check_box :price_range, {:class => "priceRange" }, 4, nil %>
-    <%= label_tag(:price_range, "$$$$") %> &nbsp;    
+    <%= label_tag(:price_range, "$$$$") %>   
   </div>
 
 
@@ -55,4 +53,3 @@
   <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
   <% end %>
 </div>
-22
