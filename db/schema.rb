@@ -40,11 +40,6 @@ ActiveRecord::Schema.define(version: 20151110232711) do
 
   add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
-  create_table "likes_users", id: false, force: :cascade do |t|
-    t.integer "like_id"
-    t.integer "user_id"
-  end
-
   create_table "trips", force: :cascade do |t|
     t.boolean  "available_now"
     t.date     "arrival_date"
@@ -53,7 +48,6 @@ ActiveRecord::Schema.define(version: 20151110232711) do
     t.string   "start_location"
     t.string   "end_location"
     t.integer  "price_range"
-    t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
