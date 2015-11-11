@@ -2,21 +2,21 @@ class LikesController < ApplicationController
  
  
  # creates new likes into db
- def create
-   @like = current_user.likes.create!(like_params)
+def create
+  @like = current_user.likes.create!(like_params)
    
+
    respond_to do |format|
 
      if @like.save
        # Tell the UserMailer to send a like info emailed after save
        UserMailer.like_email(@like).deliver
 
-        format.html { redirect_to trips_path}
-        format.json { render :show, status: :created, location: @like }
-      else
-        format.html { redirect_to signup_path}
-        format.json { render json: @like.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to trips_path}
+      format.json { render :show, status: :created, location: @like }
+    else
+      format.html { redirect_to signup_path}
+      format.json { render json: @like.errors, status: :unprocessable_entity }
     end
   end
 

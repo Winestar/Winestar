@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
   def like_email(like)
     @like = like
     mail(:to => 'rnchau@mail.sfsu.edu', 
-    	:subject => "4 likes of the user with user id!", :bcc => ['tlpride415@gmail.com', 'Julie.Vaughn@gmail.com', 'joeruef@gmail.com', 'kshah3@babson.edu', 'leogarver@gmail.com'])
+    	:subject => "4 likes of the user with user id!")
   end
 
   # like email
