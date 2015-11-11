@@ -5,51 +5,54 @@
 </div>
 
 <div class="container col-sm-6 col-sm-offset-4">
-<br>
+
+  <!-- form for the trip model -->
   <%= form_for Trip.new do |t| %>
-  <%= t.check_box :available_now if :checked %> &nbsp;
-  <%= t.label :available_now %><br>
-<br>
+      <%= t.check_box :available_now if :checked %> &nbsp;
+      <%= t.label :available_now %><br>
+      <br>
 
-  <div class="row">
-    <p id="select-dates"><%= label_tag :select_Dates %></p>
-    <div class="col-md-6 start_date">
-      <%= t.date_field :arrival_date %> 
-    </div>&nbsp;
-    <div class="col-md-6 departure_date">
-      <%= t.date_field :departure_date %> 
-    </div>
-  </div> <br> 
-  <%= t.label :group_size %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <%= t.select :number_of_people, (1..9) %>
-  <br><br>
+      <div class="row">
+        <p id="select-dates"><%= label_tag :select_Dates %></p>
+        <div class="col-md-6 start_date">
+          <%= t.date_field :arrival_date %> 
+        </div>&nbsp;
+        <div class="col-md-6 departure_date">
+          <%= t.date_field :departure_date %> 
+        </div>
+      </div> <br> 
+      <%= t.label :group_size %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= t.select :number_of_people, (1..9) %>
+      <br><br>
 
-  <div class="row price-container">
-    <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
-    <%= label_tag(:price_range, "$") %>
+    <!-- price range of the trip -->
+      <div class="row price-container">
+        <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
+        <%= label_tag(:price_range, "$") %>
 
-    <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
-    <%= label_tag(:price_range, "$$") %> 
-    <%= t.check_box :price_range, {:class => "priceRange" }, 3, nil %>
-    <%= label_tag(:price_range, "$$$") %>
+        <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
+        <%= label_tag(:price_range, "$$") %> 
+        <%= t.check_box :price_range, {:class => "priceRange" }, 3, nil %>
+        <%= label_tag(:price_range, "$$$") %>
 
-    <%= t.check_box :price_range, {:class => "priceRange" }, 4, nil %>
-    <%= label_tag(:price_range, "$$$$") %>   
+        <%= t.check_box :price_range, {:class => "priceRange" }, 4, nil %>
+        <%= label_tag(:price_range, "$$$$") %>   
+      </div>
+
+     <!-- the map embedded -->
+      <div id="map"></div>
+
+      <input id="origin-input" class="controls" name="trip[start_location]" type="text"
+      placeholder="Start Location">
+      
+      <input id="destination-input" class="controls" name="trip[end_location]" type="text"
+      placeholder="End Location">
+      <br>
+
+      <div class=" container-fluid form-group">
+      <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
+
+ <% end %>
   </div>
 
 
-
-  <div id="map"></div>
-
-  <input id="origin-input" class="controls" name="trip[start_location]" type="text"
-  placeholder="Start Location">
-  
-  <input id="destination-input" class="controls" name="trip[end_location]" type="text"
-  placeholder="End Location">
-  <br>
-
-<!-- Start Location End Location -->
-<div class=" container-fluid form-group">
-  <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
-  <% end %>
-</div>

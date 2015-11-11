@@ -85,6 +85,7 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 }
 .jumbotron{
     height: 200px;
+    margin-bottom: 5px;
 }
 #header{
     margin-bottom: 10px;
@@ -92,20 +93,15 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 #like-div{
     margin: 0 auto;
 }
+.well{
+  background-color: black;
+  opacity: .5;
+  height: 50px;
 
+}
 @media screen and (min-width: 280){
     .img-responsive
      {
         min-width: 10000px;
     }
 }
-/*@media screen and (max-width: 420px) {
-    .btn{
-        min-width: 9em;
-    }
-
-    .img-responsive, .thumbnail>img, .thumbnail a>img, 
-    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-        max-width: 6em;
-    }*/
-/*}*/

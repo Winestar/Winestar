@@ -7,11 +7,19 @@
 
 #splash_intro {
 	color: white;
+	text-align: center;
 	font-weight: bold;
 	font-size: 1.5em;
-	margin: 7em auto;
 }
-
+#image > div > form{
+	margin-top: 0px;
+}
+.well{
+  background-color: black;
+  opacity: .5;
+  height: 200px;
+  margin-top: 120px;
+}
 .button_to {
 	float: none;
 	text-align: center;
@@ -24,8 +32,13 @@
 }
 
 #logo {
-  height: 5em;
-  width: 5em;
-  margin: 1em auto;
+  height: 6em;
+  width: 6em;
+  margin: 2em auto;
   display: block;
+}
+#try{
+	font-size: 20px;
+	font-weight: bold;
+	opacity: 2;
 }
