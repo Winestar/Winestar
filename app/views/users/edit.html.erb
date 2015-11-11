@@ -27,14 +27,15 @@
             
             <!-- radio button -->
             <div class="field">
-
-                <p class="contact"><b>How would you like to be contacted?</b> (Choose one or both)</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %>
-                <%= label_tag(:contact_email, "Email") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, "contact_text", nil %>
-                <%= label_tag(:contact_text, "Mobile SMS") %>
+                <p class="contact"><b>How would you like to be contacted?</b> <br>(Choose one or both)</p>
+                <div class="textOrEmail">
+                    <p>Email<%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %><p>
+                    <p>Mobile Number&nbsp;&nbsp;&nbsp;<%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, "    contact_text", nil %></p>
+                </div>
             </div>
-        </div><br>
+
+        </div>
+        <br>
     
     <%= f.submit "Submit", class: "btn btn-primary"%>
 

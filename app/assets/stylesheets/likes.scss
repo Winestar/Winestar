@@ -32,7 +32,9 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
   background-image: url('http://d3thflcq1yqzn0.cloudfront.net/042938928_iconv.jpeg')
 
 }
-
+.textOrEmail{
+  display: inline;
+}
 .border {
     border: 1px solid gray; 
 }
@@ -60,6 +62,7 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 
 .contact {
     font-size: 11px;
+    text-align: center;
 }
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, 
@@ -85,7 +88,7 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 }
 .jumbotron{
     height: 200px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 #header{
     margin-bottom: 10px;
@@ -95,6 +98,7 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 }
 #next{
     display: block;
+    font-weight: bold;
     background-color: #f41010;
     opacity: .8;
     width: 300px;

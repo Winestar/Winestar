@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   # render user form to update user from guest user to real user
   def edit
   	@user = User.new
-    render :new
+    render :edit
   end
 
 # creates new users into db
