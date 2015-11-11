@@ -30,6 +30,8 @@ gem 'judge'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem 'figaro'
+
 
 
 # Use Unicorn as the app server

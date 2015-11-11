@@ -1,44 +1,18 @@
+<%= form_tag purchases_path do %>
+ <article>
+   <label class="amount">
+     <span>Amount: $5.00</span>
+   </label>
+</article>
 
-
-
-<%= form_for @purchase, html: {id: :new_purchase} do |f| %>
-  <% if @purchase.errors.any? %>
-    <h2><%= pluralize(@purchase.errors.count, "error") %> prohibited this purchase from being saved:</h2>
-    <ul>
-    <% @purchase.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <div class="col-sm-12">
-    <%= text_field_tag :card_number, nil, :maxlength => 16, type:"number", class: "form-control", "data-stripe" => "number", placeholder: '16 digit card number', autofocus: true, required: true %>
-  </div>
-  <div class="row">
-    <div class="col-sm-5">
-      <%= select_tag :exp_month, options_for_select(Date::MONTHNAMES.compact.each_with_index.map { |name,i| ["#{i+1} - #{name}", i+1] }), include_blank: false, "data-stripe" => "exp-month", class: "form-control left", autofocus: true, required: true %>
-    </div>
-    <div class="col-sm-4">
-      <%= select_tag :exp_year, options_for_select((Date.today.year..(Date.today.year+10)).to_a), include_blank: false, "data-stripe" => "exp-year", class: "form-control", autofocus: true, required: true %>
-    </div>
-    <div class="col-sm-3">
-      <%= text_field_tag :card_verification, nil, class: "form-control", type:"number", "data-stripe" => "cvc", placeholder: 'CVC', autofocus: true, required: true %>
-    </div>
-  
-  </div>
-  <div class="text-center">
-    <%= f.submit "show me a good time", class: "btn btn-primary", id: "book-btn", type: "submit" do %>  
-    <% end %>
-    <br>
-    <br>          
-  </div>
+ <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+   data-key= "<%= Rails.configuration.stripe[:publishable_key] %>"
+   data-description="A month's subscription"
+   data-amount="500"></script>
 <% end %>
 
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript">
-  // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-  // ...
-</script>
+
+
 
 
 

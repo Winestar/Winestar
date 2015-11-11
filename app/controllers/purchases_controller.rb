@@ -4,19 +4,24 @@ class PurchasesController < ApplicationController
   end
 
   def create
-  	@purchase = Purchase.new new_purchase_params
-    charge_card
-    @purchase.save
+    # Amount in cents
+    @amount = 500
 
-    redirect_to @purchase
+    customer = Stripe::Customer.create(
+      :email => 'example@stripe.com',
+      :card  => params[:stripeToken]
+    )
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    render :new
-  end
+    charge = Stripe::Charge.create(
+      :customer    => customer.id,
+      :amount      => @amount,
+      :description => 'Rails Stripe customer',
+      :currency    => 'usd'
+    )
 
-  def new
-  	@purchase = Purchase.new
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_purchases_path
   end
 
   def update
@@ -32,7 +37,7 @@ class PurchasesController < ApplicationController
     end
 
   	def purchase_params  
-      params.require(:purchase).permit(:card_token)
+      params.require(:purchase).permit(:email, :card_token)
     end
 
     def stripe_params
@@ -46,7 +51,7 @@ class PurchasesController < ApplicationController
     def charge_card
       Stripe::Charge.create(
         amount: 2200,
-        description: 'Mission Fresh Air',
+        description: 'Winestar',
         currency: 'usd',
         source: params[:purchase][:card_token]
       )
