@@ -19,6 +19,7 @@ def create
       format.json { render json: @like.errors, status: :unprocessable_entity }
     end
   end
+end
 
  private
  def like_params
