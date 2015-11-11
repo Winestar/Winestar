@@ -93,6 +93,14 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
 #like-div{
     margin: 0 auto;
 }
+#next{
+    display: block;
+    background-color: #f41010;
+    opacity: .8;
+    width: 300px;
+    margin: 0 auto;
+    float: none;
+}
 .well{
   background-color: black;
   opacity: .5;

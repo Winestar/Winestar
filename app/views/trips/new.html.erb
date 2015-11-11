@@ -26,16 +26,16 @@
       <br><br>
 
     <!-- price range of the trip -->
-      <div class="row price-container">
-        <%= t.check_box :price_range, {:class => "priceRange one" }, 1, nil %>
-        <%= label_tag(:priceRange, "$") %>
+    
+        <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
+        <%= label_tag(:price_range, "$") %>
 
-        <%= t.check_box :price_range, {:class => "priceRange two" }, 2, nil %>
+        <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
         <%= label_tag(:trip_price_range, "$$") %> 
-        <%= t.check_box :price_range, {:class => "priceRange three" }, 3, nil %>
+        <%= t.check_box :price_range, {:class => "priceRange" }, 3, nil %>
         <%= label_tag(:trip_price_range, "$$$") %>
 
-        <%= t.check_box :price_range, {:class => "priceRange four" }, 4, nil %>
+        <%= t.check_box :price_range, {:class => "priceRange" }, 4, nil %>
         <%= label_tag(:trip_price_range, "$$$$") %>   
       </div>
 
@@ -48,6 +48,7 @@
       <input id="destination-input" class="controls" name="trip[end_location]" type="text"
       placeholder="End Location">
       <br>
+      <b
 
       <div class=" container-fluid form-group">
       <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>

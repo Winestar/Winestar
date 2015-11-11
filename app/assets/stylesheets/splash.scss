@@ -9,14 +9,14 @@
 	color: white;
 	text-align: center;
 	font-weight: bold;
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 #image > div > form{
 	margin-top: 0px;
 }
 .well{
   background-color: black;
-  opacity: .5;
+  opacity: .7;
   height: 200px;
   margin-top: 120px;
 }
@@ -40,6 +40,6 @@
 #try{
 	font-size: 20px;
 	font-weight: bold;
-	opacity: 2;
+	z-index: 1;
 }
 @import "animate.css";
