@@ -1,8 +1,8 @@
 class TripsController < ApplicationController
-	#
+
+	#new trips
   def new
     @trip = current_user.trips.new
-  	# @trip = Trip.new
     @available_now = :available_now
   	render :new
   end
@@ -12,11 +12,9 @@ class TripsController < ApplicationController
   @trip = current_user.trips.create!(trip_params)
 
      respond_to do |format|
+
       if @trip.save
-
-        # flash[:notice] = "You Signed up successfully"
-
-        # Tell the UserMailer to send a welcome email after save
+        # Tell the UserMailer to send a trip info after save
         UserMailer.trip_email(@trip).deliver
 
         format.html { redirect_to signup_path}

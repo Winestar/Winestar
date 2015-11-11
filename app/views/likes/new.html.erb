@@ -7,12 +7,9 @@
     <p><%= button_to "Try it for free!", users_path, method: :post %></p>
 <% else %>
 
-<div class="border"></div>
-<!-- preferencers form -->
+<!-- preferences form -->
 <%= form_for Like.new do |f| %>
-<% flash.each do |name, msg| %>
-       <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-info'}" %>
-<% end %>
+
 <div class="container" id="like-div">
     <!-- ************* First Row -->
     <div class="row">
@@ -156,7 +153,9 @@
     </div>
 </div>
 
-<div class="col-md-4 col-md-offset-4"><%= button_to "Next", signup_path, method: :post, class: "btn btn-success", id: "next" %></div><br>
+<div class="col-md-4 col-md-offset-4">
+    <%= button_to "Next", trips_path, class: "btn btn-success", id: "next" %>
+</div><br>
 <% end %>
 <% end %>
 

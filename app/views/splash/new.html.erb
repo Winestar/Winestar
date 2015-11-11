@@ -1,10 +1,10 @@
 <body id="image">
 
 <img id="logo" src="https://farm1.staticflickr.com/648/22310900083_04362cc57d.jpg">
-
-<p id="splash_intro">Personalized wine country experiences without the hassle.</p>
-
-<%= button_to "Try it Free!", likes_path, method: :get, :class => "btn btn-default"%>
+<div class="container-fluid col-sm-6 col-sm-offset-3 well">
+	<p id="splash_intro">Personalized wine country experiences without the hassle.</p>
+	<%= button_to "Try it Free!", users_path, method: :post, :class => "btn btn-success", id: "try" %>
+</div>
 
 </body>
 

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
 	has_many :trips, dependent: :destroy
 	has_many :userpicks
 	has_many :likes, dependent: :destroy
@@ -21,10 +22,12 @@ class User < ActiveRecord::Base
 
 	has_secure_password(validations: false)
 
+	# method to make guest user value true after creating one
 	def self.new_guest
 		new { |u| u.guest = true }
 	end
 
+	# method which will update the user info from the params from the user  id
 	def move_to(user)
        likes.update_all(user_id: user.id)
     end
