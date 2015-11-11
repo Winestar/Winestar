@@ -28,7 +28,7 @@ class LikesController < ApplicationController
         # Tell the UserMailer to send a welcome email after save
         UserMailer.like_email(@like).deliver
 
-        format.html { redirect_to trips_path, alert: 'User was successfully created.' }
+        format.html { redirect_to trips_path}
         format.json { render :show, status: :created, location: @like }
       else
         format.html { redirect_to signup_path}

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver
 
-        format.html { redirect_to root_path, alert: 'User was successfully created.' }
+        format.html { redirect_to root_path}
         format.json { render :show, status: :created, location: @user }
       else
         format.html { redirect_to signup_path}
