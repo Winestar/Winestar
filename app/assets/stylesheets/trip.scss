@@ -74,6 +74,7 @@ label:nth-child(2):hover, label:nth-child(4):hover, label:nth-child(6):hover, la
 }
 
 #trip_price_range {
+  visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */	
 }
 

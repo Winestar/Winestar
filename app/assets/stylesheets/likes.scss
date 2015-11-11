@@ -26,14 +26,13 @@ label > input + img{ /* IMAGE STYLES */
 }
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border:2px solid #f00;
-
 }
 
 .border {
 	border: 1px solid gray; 
 }
 
-.btn{
+#next{
 	display: block;
 	background-color: #f41010;
 	opacity: .8;

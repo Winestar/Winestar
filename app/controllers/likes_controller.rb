@@ -19,6 +19,9 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(like_params)
     if @like.save
+              # Tell the UserMailer to send a welcome email after save
+        UserMailer.like_email(@like).deliver
+
       # @user = current_user
       # redirected_to @user, notice: "Signed up successfully."
       # session[:user_id] = user.user_id
@@ -27,6 +30,12 @@ class LikesController < ApplicationController
       # format.html { render action: "new"}
       redirect_to likes_path
     end
+
+
+
+
+
+
   end
 
 
