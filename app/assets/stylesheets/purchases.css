@@ -1,9 +1,11 @@
 .img-box {
 	height:80vh;
 	width:100vw;
+
 }
 .logo-box {
 	text-align:center;
+	background-color: red;
 }
 .logo {
 	width:100px;
@@ -11,6 +13,7 @@
     vertical-align: text-top;
 
 }
+
 
 
 
