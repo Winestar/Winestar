@@ -27,7 +27,7 @@
           <%= t.date_field :departure_date %> 
         </div>
       </div> <br> 
-      <%= t.label :group_size %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= t.label :group_size %>;
       <%= t.select :number_of_people, (1..9) %>
       <br><br>
 
@@ -55,9 +55,8 @@
       <br>
       <br>
       <div>
-
+        <p id="additional_information">Additional Information</p>
         <%= t.text_area(:additional_info) %>
-
       </div>
 
       <div class=" container-fluid form-group">
