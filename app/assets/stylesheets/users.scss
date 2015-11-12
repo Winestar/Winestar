@@ -2,9 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .row-fluid {
 	display: flex;
   margin-bottom: 1.25em;
+}
+
+.email {
+	float: left;
+	width: 50%;
+}
+
+.mobile {
+	float: right;
+	width: 50%;
 }
 
 #user_first_name, #user_last_name {
@@ -15,4 +26,18 @@
 
 #user_last_name {
 	bottom: 1.75em;
+}
+
+#user_contact_email {
+  display: block;
+  position: relative;
+  left: -3em;
+  top: -1.4em;
+}
+
+#user_contact_text {
+	display: block;
+  position: relative;
+  left: 7em;
+  top: -1.3em;
 }

@@ -1,11 +1,13 @@
+
 <div class="jumbotron container">
-    <h3>Tell us about yourself</h3>
-    <h4>Let us know how to contact you.</h4>
+    <h3>Please insert your contact information to your itinerary request.</h3>
+    <h2> Salud! </h2>
 
 </div>
 
 <!-- form begins -->
 <div class="container-fluid col-sm-4 col-sm-offset-4">
+
     <%= form_for(@user, :builder => Judge::FormBuilder) do |f| %>
     
     <% flash.each do |name, msg| %>
@@ -26,20 +28,23 @@
     
             
             <!-- radio button -->
-            <div class="field">
-                <p class="contact"><b>How would you like to be contacted?</b> <br>(Choose one or both)</p>
-                <div class="textOrEmail">
-                    <p>Email<%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %><p>
-                    <p>Mobile Number&nbsp;&nbsp;&nbsp;<%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, "    contact_text", nil %></p>
+            <h4>How would you like to be contacted? <br>(Choose one or both)</h4>
+
+                 <div class="email col-sm-6">
+   
+                    Email<%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %>
                 </div>
-
-               
+                <div class="mobile col-sm-6">
+                    Mobile Number&nbsp;&nbsp;&nbsp;<%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, " contact_text", nil %>
+                </div>
             </div>
+               
+            <%= f.submit "Submit",  class: "btn btn-primary"%>
 
-        </div>
-        <br>
     
-    <%= f.submit "Submit",  class: "btn btn-primary"%>
+        </div>
+
+        <br>
 
     <% end %> 
 </div>

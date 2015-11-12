@@ -1,7 +1,7 @@
-// Place all the styles related to the trip controller here.
+/*// Place all the styles related to the trip controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+*/
 
 
 .start_date {
@@ -24,6 +24,11 @@
 	border-radius: 5px;
   width: 40%;
   margin: 0 auto;
+}
+
+.select-date-row {
+	margin: 0 auto;
+	width: 35%;
 }
 
 #new_trip > label:nth-child(15), #new_trip > label:nth-child(17) ,
@@ -49,7 +54,6 @@
 }
 
 #trip_arrival_date, #trip_departure_date {
-	width: 30em;
 }
 
 #origin-input {
@@ -74,8 +78,12 @@
 }
 
 @media screen and (max-width: 420px) {
+
+	.select-date-row {
+		width: 100%;
+	}
 	#trip_arrival_date, #trip_departure_date {
-	width: 8em;
+		width: 8em;
 	}
 
 }

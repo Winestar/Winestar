@@ -4,15 +4,17 @@
   <h4>Pick anything that catches your eye</h4>
 </div>
 
-<div class="container col-sm-6 col-sm-offset-4">
+<div class="container trip-form col-sm-6 col-sm-offset-4">
 
   <!-- form for the trip model -->
   <%= form_for Trip.new do |t| %>
+  <!-- Available Now -->
       <%= t.check_box :available_now if :checked %> &nbsp;
       <%= t.label :available_now %><br>
       <br>
 
-      <div class="row">
+  <!-- Select Dates -->
+      <div class="row select-date-row">
         <p id="select-dates"><%= label_tag :select_Dates %></p>
         <div class="col-md-6 start_date">
           <%= t.date_field :arrival_date %> 
@@ -26,7 +28,6 @@
       <br><br>
 
     <!-- price range of the trip -->
-    
         <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
         <%= label_tag(:price_range, "$") %>
 
@@ -48,7 +49,12 @@
       <input id="destination-input" class="controls" name="trip[end_location]" type="text"
       placeholder="End Location">
       <br>
-      <b
+      <br>
+      <div>
+        <p>Additional Info:</p>
+          <%= text_field_tag(:additional_info) %>
+
+      </div>
 
       <div class=" container-fluid form-group">
       <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
