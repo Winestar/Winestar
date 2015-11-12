@@ -1,5 +1,32 @@
 $(function(){
   
+  //jquery validation for the trips form
+  $('#trip-submit').click(function(){
+
+    if(
+        ($('#trip_arrivals_date').val() === '') || 
+        ($('#trip_departure_date').val() === '') ||
+        ($('#origin-input').val() === '') ||
+        ($('#destination-input').val() === '') ||
+        ($('#trip_additional_info').val() === '')
+      )
+      {
+        alert('Please fill out all the fields for your trip.')
+        event.preventDefault();
+      }
+    // if ($('#trip_arrivals_date').val() && $('#trip_departure_date').val() &&
+    //   $('#origin-input').val() && $('#destination-input').val() && 
+    // if ($('#trip_additional_info').val() === "" )
+    //  {
+    //     alert('Please fill out all the fields for your trip.');
+    // }
+    // else if ($('#trip_arrivals_date').val() === "") {
+
+    // }
+  })
+
+
+
   
     //user can only select up to four fields from the like model
     $('#next').click(function() {

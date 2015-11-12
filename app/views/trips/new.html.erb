@@ -51,12 +51,12 @@
       <br>
       <br>
       <div>
-        <%= text_area(:additional_info, "Additional_Info", :placeholder => "Let the Winestar team know what else is on your mind! :)") %>
+        <%= t.text_area(:additional_info) %>
 
       </div>
 
       <div class=" container-fluid form-group">
-      <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
+      <%= t.submit ("Submit"), class: "btn btn-success", id: "trip-submit", data:{ confirm: "Please confirm this trip." } %>
 
  <% end %>
   </div>

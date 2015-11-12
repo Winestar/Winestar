@@ -52,7 +52,9 @@ span {
     opacity: .8;
     width: 300px;
     margin: 0 auto;
+    margin-bottom: 15px;
     float: none;
+    border: none;
 }
 
 
@@ -115,10 +117,10 @@ span {
     position: relative;
     top: -1.75em;
 }
-.well{
+#bg-message{
   background-color: black;
   opacity: .5;
-  height: 50px;
+  height: 120px;
 
 }
 @media screen and (min-width: 280){
