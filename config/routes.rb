@@ -26,14 +26,14 @@ Rails.application.routes.draw do
 	#users routes home
 	get "/signup", to: "users#edit"
 
-	get "/profile", to: "profile#new"
+	get "/profile", to: "users#show"
 
 		# Sesions routes
 	get "/login", to: "sessions#new"
 	post "/logout", to: "sessions#destroy"
 	resources :sessions, only: [:create]
 
-	resources :users, only: [:create, :update, :edit]
+	resources :users, only: [:create, :update, :edit, :show]
 	resources :likes, only: [:create]
 	resources :trips, only: [:create]
 	

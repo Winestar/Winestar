@@ -16,7 +16,6 @@ class UsersController < ApplicationController
         current_user.move_to(@user) if current_user && current_user.guest?
         session[:user_id] = @user.id
 
-
         # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver
 
@@ -42,8 +41,8 @@ class UsersController < ApplicationController
 
 #show current_user
   def show
-    @user = User.find(params[:id])
-    # render :show
+    @current_user = User.find(params[:user_id])
+    render :show
   end
 
   private
