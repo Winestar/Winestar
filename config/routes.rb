@@ -19,7 +19,7 @@ Rails.application.routes.draw do
  	# creates new user in db
  	get 'trips/create'
 
-
+ 	get '/success', to: "profile#show"
  	#show current user
  	get 'trips/show'
 
