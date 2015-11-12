@@ -1,8 +1,10 @@
+<!-- btn btn-success btn-lg btn-block -->
 <%= form_tag purchases_path, id: 'chargeForm' do %>
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <%= hidden_field_tag 'stripeToken' %>
     <%= hidden_field_tag 'stripeEmail' %>  
-    <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span> I want this!</button>
+    <%= hidden_field_tag 'amount', 2500 %>  
+    <button id="btn-buy" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> I want this!</button>
     <script>
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
@@ -16,7 +18,7 @@
       handler.open({
         name: 'Winestar',
         description: 'Booking Winery Tour',
-        amount: 2500
+        amount: document.getElementById("amount").value
     });
     e.preventDefault();
    })
