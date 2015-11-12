@@ -55,12 +55,16 @@ span {
     float: none;
 }
 
+<<<<<<< HEAD:app/assets/stylesheets/likes.css
+/*.container {
+=======
 
 .container {
+>>>>>>> 88ec0cf7a3b841d01ac530714f7f630de10b1573:app/assets/stylesheets/likes.scss
     margin: 0 auto;
     width: 100%;
     padding: 0;
-}
+}*/
 
 .navbar {
     background-color: #e6e6e6;
