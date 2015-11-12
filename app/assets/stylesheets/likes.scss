@@ -1,0 +1,132 @@
+/*// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+html, body {
+    border: 0;
+    margin: 0;
+}
+
+h3{
+  font-size: 25px;
+  font-family: open-sans;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+
+}
+h4{
+    text-align: center;
+    font-size: 20px;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
+  border:5px solid #f00;
+  background-image: url('http://d3thflcq1yqzn0.cloudfront.net/042938928_iconv.jpeg')
+
+}
+
+span {
+  font-size: .75em;
+}
+
+.textOrEmail{
+  display: inline;
+}
+.border {
+    border: 1px solid gray; 
+}
+
+.btn{
+    display: block;
+    background-color: #f41010;
+    opacity: .8;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    float: none;
+    border: none;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #e6e6e6;
+      margin: 0;
+      border: 0;
+}
+
+.contact {
+    font-size: 11px;
+    text-align: center;
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, 
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    padding-left: 0;
+  padding-right: 0;
+  width: 20em;
+}
+
+.thumbnail {
+    border: 0;
+}
+#user_contact_email{
+    margin-left: 100px;
+}
+#brand{
+    display: inline;
+    margin-top: -.75em;
+    margin-left: 50px;
+    color: #2780e3;
+    font-size: 40px;
+    font-weight: bold;
+}
+.jumbotron{
+    height: 200px;
+    margin-bottom: 15px;
+}
+#header{
+    margin-bottom: 10px;
+}
+#like-div{
+    margin: 0 auto;
+}
+#next{
+    display: block;
+    font-weight: bold;
+    background-color: #f41010;
+    opacity: .8;
+    width: 300px;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    top: -1.75em;
+}
+#bg-message{
+  background-color: black;
+  opacity: .5;
+  height: 120px;
+
+}
+@media screen and (min-width: 280){
+    .img-responsive
+     {
+        min-width: 10000px;
+    }
+}
+@import "animate.css";
