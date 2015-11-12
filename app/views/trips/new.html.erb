@@ -48,7 +48,12 @@
       <input id="destination-input" class="controls" name="trip[end_location]" type="text"
       placeholder="End Location">
       <br>
-      <b
+      <br>
+      <div>
+        <p>Additional Info:</p>
+          <%= text_field_tag(:additional_info) %>
+
+      </div>
 
       <div class=" container-fluid form-group">
       <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
