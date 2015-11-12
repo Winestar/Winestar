@@ -1,11 +1,11 @@
 class TripsController < ApplicationController
 
 	#new trips
-  def new
-    @trip = current_user.trips.new
-    @available_now = :available_now
-  	render :new
-  end
+  # def new
+  #   @trip = current_user.trips
+  #   @available_now = :available_now
+  # 	render :new
+  # end
 
   # creates new trip in db
   def create
