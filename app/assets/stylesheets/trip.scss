@@ -15,17 +15,19 @@
   position: relative  ;
   top: 1em;
   border-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .start_date {
 	display: inline;
   margin: 0 auto;
-  margin-top: 1.5em;
+  float: left;
 }
 
 .departure_date {
 	display: inline;
   margin: 0 auto;
+  float: right;
 }
 
 .priceRange {
@@ -40,11 +42,11 @@
 }
 
 .select-date-row {
-	margin: 0 auto;
-	width: 35%;
+  margin: 0 auto;
+  width: 65%;
 }
 
-#additional_info_Additional_Info {
+#trip_additional_info {
   position: relative;
   margin: 0 auto;
   display: block;
@@ -81,9 +83,6 @@
   position: relative;
 }
 
-#trip_arrival_date, #trip_departure_date {
-}
-
 #origin-input {
 	border: 2px solid silver;
 	border-radius: 5px;
@@ -101,8 +100,19 @@
   height: 3em; 
 }
 
+#logo {
+  display: inline;
+}
+
 #select-dates {
 	font-size: 1em;
+}
+
+#trip-headliner {
+  color: white;
+  text-align: center;
+  top: -3em;
+  position: relative;
 }
 
 @media screen and (max-width: 420px) {
@@ -114,8 +124,25 @@
 	.select-date-row {
 		width: 100%;
 	}
+
+  .select-date-row_date {
+    margin-top: 0em;
+  }
+
 	#trip_arrival_date, #trip_departure_date {
 		width: 8em;
 	}
+
+  #trip-headliner {
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    text-align: center;
+    top: -5em;
+    position: relative;
+    font-size: 1.25em;
+    width: 65%;
+    margin: 0 5em;
+  }
+
 
 }

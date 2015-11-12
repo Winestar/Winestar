@@ -1,6 +1,7 @@
 <!-- jumbotron -->
 <div class="jumbotron container">
-  <h3> Please add the following information <br> so we can optimize your day.</h3>
+  <img id="logo" href="/" src="https://farm1.staticflickr.com/750/22536085337_33dcc77bc0_m.jpg">
+  <h3 id="trip-headliner"> Please add the following information <br> so we can optimize your day.</h3>
 </div>
 
 <div class="border">
@@ -17,9 +18,12 @@
       <div class="row select-date-row">
         <p id="select-dates"><%= label_tag :select_Dates %></p>
         <div class="col-md-6 start_date">
+         <p>Arrive Date</p>
           <%= t.date_field :arrival_date %> 
-        </div>&nbsp;
+        </div>
+
         <div class="col-md-6 departure_date">
+         <p>Depart Date</p>
           <%= t.date_field :departure_date %> 
         </div>
       </div> <br> 
@@ -28,7 +32,7 @@
       <br><br>
 
     <!-- price range of the trip -->
-        <%= t.check_box :price_range, {:class => "priceRange" }, 1, nil %>
+        <%= t.check_box :price_range, {:class => "priceRange"}, 1, nil %>
         <%= label_tag(:price_range, "$") %>
 
         <%= t.check_box :price_range, {:class => "priceRange" }, 2, nil %>
@@ -51,11 +55,11 @@
       <br>
       <br>
       <div>
-        <%= text_area(:additional_info, "Additional_Info", :placeholder => "Let the Winestar team know what else is on your mind! :)") %>
+        <%= t.text_area :additional_info %>
 
       </div>
 
-      <div class=" container-fluid form-group">
+      <div class="container-fluid form-group">
       <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
 
  <% end %>

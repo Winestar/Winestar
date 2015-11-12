@@ -1,19 +1,4 @@
-#image {
-	background-size: cover;
-  background-attachment: fixed;
-  background-image: url("https://farm6.staticflickr.com/5742/22331035174_e097d79b17_h.jpg"); 
-  background-position: center center;
-}
-
-#splash_intro {
-	color: white;
-	text-align: center;
-	font-size: 1.6em;
-}
-#image > div > form{
-	margin-top: 0px;
-}
-.well{
+.well {
   background-color: black;
   border: none;
   opacity: .7;
@@ -31,12 +16,29 @@
 	color: red;
 }
 
+#image {
+	background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://farm6.staticflickr.com/5742/22331035174_e097d79b17_h.jpg"); 
+  background-position: center center;
+}
+
+#splash_intro {
+	color: white;
+	text-align: center;
+	font-size: 1.6em;
+}
+#image > div > form{
+	margin-top: 0px;
+}
+
 #logo {
-  height: 6em;
-  width: 6em;
+  height: 4em;
+  width: 4em;
   margin: 2em;
   display: block;
 }
+
 #try{
 	font-size: 20px;
 	font-weight: bold;

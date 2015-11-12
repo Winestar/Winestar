@@ -7,15 +7,6 @@ html, body {
     margin: 0;
 }
 
-h3{
-  font-size: 25px;
-  font-family: open-sans;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 25px;
-
-}
 h4{
     text-align: center;
     font-size: 20px;
@@ -83,27 +74,39 @@ span {
 .thumbnail {
     border: 0;
 }
-#user_contact_email{
-    margin-left: 100px;
-}
-#brand{
-    display: inline;
-    margin-top: -.75em;
-    margin-left: 50px;
-    color: #2780e3;
-    font-size: 40px;
-    font-weight: bold;
-}
+
 .jumbotron{
     height: 200px;
     margin-bottom: 15px;
+    background-attachment: fixed;
+    background: url("https://farm1.staticflickr.com/583/22965958721_93c443b8b8_m.jpg");
+    background-size: cover;
+    background-position: center;
 }
+
+.well{
+  background-color: black;
+  opacity: .5;
+  height: 50px;
+}
+
+#brand{
+  display: inline;
+  margin-top: -.75em;
+  margin-left: 50px;
+  color: #2780e3;
+  font-size: 40px;
+  font-weight: bold;
+}
+
 #header{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 #like-div{
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
 #next{
     display: block;
     font-weight: bold;
@@ -115,16 +118,40 @@ span {
     position: relative;
     top: -1.75em;
 }
-.well{
-  background-color: black;
-  opacity: .5;
-  height: 50px;
+
+#likes-headliner {
+  font-family: open-sans;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+  margin: 0 6em;
+  position: relative;
+  width: 50%;
+  top: -4em;
+}
+
+#user_contact_email{
+    margin-left: 100px;
+}
+
+#logo {
+  height: 4em;
+  width: 4em;
+  margin: 1em;
+  display: block;
+}
+
+
+
+@media screen and (max-width: 300){
+
+  .img-responsive {
+    min-width: 10000px;
+  }
 
 }
-@media screen and (min-width: 280){
-    .img-responsive
-     {
-        min-width: 10000px;
-    }
-}
+
+
 @import "animate.css";
