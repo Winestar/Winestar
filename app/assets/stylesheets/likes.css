@@ -43,15 +43,17 @@ span {
     opacity: .8;
     width: 300px;
     margin: 0 auto;
+    margin-bottom: 15px;
     float: none;
+    border: none;
 }
 
+/*.container {
 
-.container {
     margin: 0 auto;
     width: 100%;
     padding: 0;
-}
+}*/
 
 .navbar {
     background-color: #e6e6e6;
@@ -117,6 +119,12 @@ span {
     float: none;
     position: relative;
     top: -1.75em;
+}
+
+#bg-message{
+  background-color: black;
+  opacity: .5;
+  height: 120px;
 }
 
 #likes-headliner {

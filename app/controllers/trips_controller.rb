@@ -1,11 +1,11 @@
 class TripsController < ApplicationController
 
 	#new trips
-  def new
-    @trip = current_user.trips.new
-    @available_now = :available_now
-  	render :new
-  end
+  # def new
+  #   @trip = current_user.trips
+  #   @available_now = :available_now
+  # 	render :new
+  # end
 
   # creates new trip in db
   def create
@@ -32,7 +32,7 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-    params.require(:trip).permit(:available_now, :arrival_date, :departure_date, :number_of_people, :start_location, :end_location, :price_range)
+    params.require(:trip).permit(:available_now, :arrival_date, :departure_date, :number_of_people, :start_location, :end_location, :price_range, :additional_info)
   end
 
 end

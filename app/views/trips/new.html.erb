@@ -55,12 +55,13 @@
       <br>
       <br>
       <div>
-        <%= t.text_area :additional_info %>
+
+        <%= t.text_area(:additional_info) %>
 
       </div>
 
-      <div class="container-fluid form-group">
-      <%= t.submit ("Submit"), class: "btn btn-success", data:{ confirm: "Please confirm this trip." } %>
+      <div class=" container-fluid form-group">
+      <%= t.submit ("Submit"), class: "btn btn-success", id: "trip-submit", data:{ confirm: "Please confirm this trip." } %>
 
  <% end %>
   </div>
