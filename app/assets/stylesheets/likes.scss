@@ -8,10 +8,12 @@ html, body {
 }
 
 h3{
-    font-weight: bold;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 25px;
+  font-size: 25px;
+  font-family: open-sans;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
 
 }
 h4{
@@ -32,6 +34,11 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
   background-image: url('http://d3thflcq1yqzn0.cloudfront.net/042938928_iconv.jpeg')
 
 }
+
+span {
+  font-size: .75em;
+}
+
 .textOrEmail{
   display: inline;
 }
@@ -47,6 +54,7 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
     margin: 0 auto;
     float: none;
 }
+
 
 .container {
     margin: 0 auto;
@@ -104,6 +112,8 @@ label > input:checked + img{/* (RADIO CHECKED) IMAGE STYLES */
     width: 300px;
     margin: 0 auto;
     float: none;
+    position: relative;
+    top: -1.75em;
 }
 .well{
   background-color: black;

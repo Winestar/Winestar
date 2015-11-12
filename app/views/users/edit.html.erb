@@ -1,7 +1,7 @@
 
 <div class="jumbotron container">
-    <h3>Please insert your contact information to your itinerary request.</h3>
-    <h2> Salud! </h2>
+    <h3>Please insert your contact information to your itinerary request.
+    <br> Salud! </h3>
 
 </div>
 
@@ -29,14 +29,14 @@
     
             
             <!-- radio button -->
-            <h4>How would you like to be contacted? <br>(Choose one or both)</h4>
+            <h4>How would you like to be contacted? <br> <span>(Choose one or both)</span></h4>
 
                  <div class="email col-sm-6">
    
                     Email<%= f.check_box :contact_email, {:class => "myclass", :style => "mystyle"}, "contact_email", nil %>
                 </div>
                 <div class="mobile col-sm-6">
-                    Mobile Number&nbsp;&nbsp;&nbsp;<%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, " contact_text", nil %>
+                    Mobile <%= f.check_box :contact_text, {:class => "myclass", :style => "mystyle"}, " contact_text", nil %>
                 </div>
             </div>
                
