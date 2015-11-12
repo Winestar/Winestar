@@ -18,6 +18,10 @@
 	width: 50%;
 }
 
+.jumbotron {
+  width: 100%;
+}
+
 #user_first_name, #user_last_name {
 	display: inline;
   width: 50%;
@@ -51,5 +55,15 @@
   top: -3em;
   position: relative;
 }
+
+@media screen and (max-width: 420px) {
+  #user-headliner{
+    background-color: rgba(0,0,0,.4);
+    font-size: 20px;
+    margin: 0 5em;
+    top: -5em;
+  }
+}
+
 
 

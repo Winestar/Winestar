@@ -43,7 +43,7 @@
 
 .select-date-row {
   margin: 0 auto;
-  width: 65%;
+  width: 105%;
 }
 
 #trip_additional_info {
@@ -121,12 +121,15 @@
     width: 100%;
   }
 
+
 	.select-date-row {
 		width: 100%;
 	}
 
   .select-date-row_date {
     margin-top: 0em;
+    padding-left: 0;
+    padding-right: 0;
   }
 
 	#trip_arrival_date, #trip_departure_date {
