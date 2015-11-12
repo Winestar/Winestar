@@ -3,6 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 */
 
+.border {
+  box-shadow: 1px 1px 3px #888888;
+  border: 1px solid black;
+  margin: 0 auto; 
+  width: 50%;
+  top: -1em; 
+}
+
+.btn-success {
+  position: relative  ;
+  top: 1em;
+  border-bottom: 1em;
+}
 
 .start_date {
 	display: inline;
@@ -31,6 +44,14 @@
 	width: 35%;
 }
 
+#additional_info_Additional_Info {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  height: 6em;
+}
+
 #new_trip > label:nth-child(15), #new_trip > label:nth-child(17) ,
 #new_trip > label:nth-child(19), #new_trip > label:nth-child(21) {
   left: -0.3em; 
@@ -49,8 +70,15 @@
   text-align: center;
 }
 
+#new_trip > label:nth-child(5) {
+  position: relative;
+  top: 1em;
+}
+
 #trip_available_now {
 	border-radius: 50px;
+  top: 1em;
+  position: relative;
 }
 
 #trip_arrival_date, #trip_departure_date {
@@ -78,6 +106,10 @@
 }
 
 @media screen and (max-width: 420px) {
+  .border {
+    border: none;
+    width: 100%;
+  }
 
 	.select-date-row {
 		width: 100%;

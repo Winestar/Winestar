@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   # render user form to update user from guest user to real user
   def edit
-  	@user = User.new
+  	@user = current_user
     render :edit
   end
 
@@ -33,15 +33,20 @@ class UsersController < ApplicationController
 
   # update user with user attributes
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     @user.update_attributes(user_params)
-    redirect_to profile_path
+    redirect_to '/success'
 
   end
 
 #show current_user
   def show
-    @current_user = User.find(params[:user_id])
+    @user = current_user
+    # @like = Like.joins(:user).where('user_id = ?', @user)
+    # @user.joins(:like, :trip)
+    # @trip = current_user.trips.find!(trip_params)
+    
+    # @current_user = User.find(params[:user_id])
     render :show
   end
 
